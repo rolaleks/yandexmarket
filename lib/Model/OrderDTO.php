@@ -606,7 +606,7 @@ class OrderDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets items_total
      *
-     * @param float|null $items_total Общая сумма заказа в валюте заказа без учета стоимости доставки и вознаграждения партнеру за скидки по промокодам, купонам и акциям (параметр subsidyTotal).  Для отделения целой части от дробной используется точка.
+     * @param float|null $items_total Общая сумма заказа в валюте заказа без учета стоимости доставки и вознаграждения партнеру за скидки по промокодам, купонам и акциям (параметр `subsidyTotal`).  Для отделения целой части от дробной используется точка.
      *
      * @return self
      */
@@ -633,7 +633,7 @@ class OrderDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total
      *
-     * @param float|null $total Общая сумма заказа в валюте заказа с учетом стоимости доставки, но без учета вознаграждения партнеру за скидки по промокодам, купонам, кешбэку и акциям (параметр `subsidyTotal`).  Для отделения целой части от дробной используется точка.
+     * @param float|null $total {% note warning \"\" %}  Этот параметр устарел. Чтобы узнать соответствующее значение, сложите значения `itemsTotal` и `deliveryTotal`.  {% endnote %}  Общая сумма заказа в валюте заказа с учетом стоимости доставки, но без учета вознаграждения партнеру за скидки по промокодам, купонам, кешбэку и акциям (параметр `subsidyTotal`).  Для отделения целой части от дробной используется точка.
      *
      * @return self
      */
@@ -660,7 +660,7 @@ class OrderDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets delivery_total
      *
-     * @param float|null $delivery_total Стоимость доставки в валюте заказа.
+     * @param float|null $delivery_total Стоимость доставки в валюте заказа.  Для отделения целой части от дробной используется точка.
      *
      * @return self
      */
@@ -687,7 +687,7 @@ class OrderDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets subsidy_total
      *
-     * @param float|null $subsidy_total Общее вознаграждение партнеру за скидки:  * по промокодам; * по купонам; * по баллам кешбэка по подписке Яндекс Плюс; * по акциям.  Передается в валюте, указанной в параметре `currency`.  Для отделения целой части от дробной используется точка.
+     * @param float|null $subsidy_total {% note warning \"\" %}  Этот параметр устарел. Чтобы узнать соответствующее значение, сложите значения всех субсидий в `subsidies`.  {% endnote %}  Общее вознаграждение партнеру за DBS-доставку и все скидки:  * по промокодам; * по купонам; * по баллам Плюса; * по акциям.  Передается в валюте, указанной в параметре `currency`.  Для отделения целой части от дробной используется точка.
      *
      * @return self
      */
@@ -714,7 +714,7 @@ class OrderDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total_with_subsidy
      *
-     * @param float|null $total_with_subsidy Сумма стоимости всех товаров в заказе и вознаграждения за них в валюте магазина (сумма параметров total и subsidyTotal)
+     * @param float|null $total_with_subsidy {% note warning \"\" %}  Этот параметр устарел. Чтобы узнать соответствующее значение, сложите значения `itemsTotal`, `deliveryTotal` и всех субсидий в `subsidies`.  {% endnote %}  Сумма стоимости всех товаров в заказе и вознаграждения за них в валюте магазина (сумма параметров `total` и `subsidyTotal`).
      *
      * @return self
      */
@@ -903,7 +903,7 @@ class OrderDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets fake
      *
-     * @param bool|null $fake Тип заказа:  * false — заказ покупателя.  * true — тестовый заказ Маркета.
+     * @param bool|null $fake Тип заказа:  * `false` — настоящий заказ покупателя.  * `true` — [тестовый](../../pushapi/concepts/sandbox.md) заказ Маркета.
      *
      * @return self
      */
@@ -1092,7 +1092,7 @@ class OrderDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets cancel_requested
      *
-     * @param bool|null $cancel_requested Запрошена ли отмена.
+     * @param bool|null $cancel_requested **Только для модели DBS**  Запрошена ли отмена.
      *
      * @return self
      */

@@ -35,7 +35,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * BusinessDTO Class Doc Comment
  *
  * @category Class
- * @description Информацию о кабинете.
+ * @description Информация о кабинете.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

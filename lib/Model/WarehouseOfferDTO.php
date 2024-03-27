@@ -311,12 +311,6 @@ class WarehouseOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
             $invalidProperties[] = "invalid value for 'offer_id', must be conform to the pattern /^[0-9a-zа-яА-ЯA-ZёËëЁ.,\\\\\/()\\[\\]\\-=_]{1,80}$/.";
         }
 
-        if ($this->container['stocks'] === null) {
-            $invalidProperties[] = "'stocks' can't be null";
-        }
-        if ($this->container['updated_at'] === null) {
-            $invalidProperties[] = "'updated_at' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -345,7 +339,7 @@ class WarehouseOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets offer_id
      *
-     * @param string $offer_id **Ваш SKU**  Идентификатор товара в магазине. Разрешены английские и русские буквы, цифры и символы `. , / \\ ( ) [ ] - = _`  Максимальная длина — 80 знаков.  [Что такое SKU и как его назначать](https://yandex.ru/support/marketplace/assortment/add/index.html#fields).
+     * @param string $offer_id Ваш SKU — идентификатор товара в вашей системе.  Разрешена любая последовательность длиной до 80 знаков. В нее могут входить английские и русские буквы, цифры и символы `. , / \\ ( ) [ ] - = _`  Правила использования SKU:  * У каждого товара SKU должен быть свой.  * SKU товара нельзя менять — можно только удалить товар и добавить заново с новым SKU.  * Уже заданный SKU нельзя освободить и использовать заново для другого товара. Каждый товар должен получать новый идентификатор, до того никогда не использовавшийся в вашем каталоге.  [Что такое SKU и как его назначать](https://yandex.ru/support/marketplace/assortment/add/index.html#fields)
      *
      * @return self
      */
@@ -399,7 +393,7 @@ class WarehouseOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets stocks
      *
-     * @return \OpenAPI\Client\Model\WarehouseStockDTO[]
+     * @return \OpenAPI\Client\Model\WarehouseStockDTO[]|null
      */
     public function getStocks()
     {
@@ -409,7 +403,7 @@ class WarehouseOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets stocks
      *
-     * @param \OpenAPI\Client\Model\WarehouseStockDTO[] $stocks Информация об остатках.
+     * @param \OpenAPI\Client\Model\WarehouseStockDTO[]|null $stocks Информация об остатках.
      *
      * @return self
      */
@@ -426,7 +420,7 @@ class WarehouseOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets updated_at
      *
-     * @return \DateTime
+     * @return \DateTime|null
      */
     public function getUpdatedAt()
     {
@@ -436,7 +430,7 @@ class WarehouseOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets updated_at
      *
-     * @param \DateTime $updated_at Дата и время последнего обновления информации об остатках.  Формат даты и времени: ISO 8601 со смещением относительно UTC. Например, `2023-11-21T00:42:42+03:00`.
+     * @param \DateTime|null $updated_at Дата и время последнего обновления информации об остатках.  Формат даты и времени: ISO 8601 со смещением относительно UTC. Например, `2023-11-21T00:42:42+03:00`.
      *
      * @return self
      */

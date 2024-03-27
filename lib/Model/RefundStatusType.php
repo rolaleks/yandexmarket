@@ -33,7 +33,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * RefundStatusType Class Doc Comment
  *
  * @category Class
- * @description Cтатус возврата средств:  * STARTED_BY_USER — создан клиентом из личного кабинета.  * REFUND_IN_PROGRESS — ждет решение о возврате средств.  * REFUNDED — по возврату проведены все возвратные денежные транзакции.  * FAILED — невозможно провести возврат покупателю.  * WAITING_FOR_DECISION — ожидает решения.  * DECISION_MADE — по возврату принято решение.  * REFUNDED_WITH_BONUSES — возврат осуществлен баллами Плюса или промокодом.  * REFUNDED_BY_SHOP — магазин сделал самостоятельно возврат средств.  * CANCELLED — возврат отменен.
+ * @description Cтатус возврата денег:  * &#x60;STARTED_BY_USER&#x60; — создан клиентом из личного кабинета.  * &#x60;REFUND_IN_PROGRESS&#x60; — ждет решение о возврате денег.  * &#x60;REFUNDED&#x60; — по возврату проведены все возвратные денежные транзакции.  * &#x60;FAILED&#x60; — невозможно провести возврат покупателю.  * &#x60;WAITING_FOR_DECISION&#x60; — ожидает решения.  * &#x60;DECISION_MADE&#x60; — по возврату принято решение.  * &#x60;REFUNDED_WITH_BONUSES&#x60; — возврат осуществлен баллами Плюса или промокодом.  * &#x60;REFUNDED_BY_SHOP&#x60; — магазин сделал самостоятельно возврат денег.  * &#x60;CANCELLED&#x60; — возврат отменен.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

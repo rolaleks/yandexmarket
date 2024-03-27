@@ -59,7 +59,7 @@ class BasePriceDTO implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'value' => 'float',
-        'currency_id' => 'string'
+        'currency_id' => '\OpenAPI\Client\Model\CurrencyType'
     ];
 
     /**
@@ -342,7 +342,7 @@ class BasePriceDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets currency_id
      *
-     * @return string
+     * @return \OpenAPI\Client\Model\CurrencyType
      */
     public function getCurrencyId()
     {
@@ -352,7 +352,7 @@ class BasePriceDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets currency_id
      *
-     * @param string $currency_id Валюта.  Если `BasePriceDTO` присутствует в запросе, указывайте `RUR` — российский рубль.
+     * @param \OpenAPI\Client\Model\CurrencyType $currency_id currency_id
      *
      * @return self
      */

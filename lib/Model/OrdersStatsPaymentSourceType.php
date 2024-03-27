@@ -33,7 +33,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * OrdersStatsPaymentSourceType Class Doc Comment
  *
  * @category Class
- * @description Способ денежного перевода: - &#x60;BUYER&#x60; — оплата или возврат деньгами; - &#x60;CASHBACK&#x60; — оплата или возврат баллами кешбэка по подписке Яндекс Плюс; - &#x60;MARKETPLACE&#x60; — оплата или возврат купонами; - &#x60;SPASIBO&#x60; — оплата или возврат бонусами СберСпасибо.
+ * @description Способ денежного перевода: - &#x60;BUYER&#x60; — оплата или возврат деньгами; - &#x60;CASHBACK&#x60; — оплата или возврат баллами Плюса; - &#x60;MARKETPLACE&#x60; — оплата или возврат купонами; - &#x60;SPASIBO&#x60; — оплата или возврат бонусами СберСпасибо; - &#x60;SPLIT&#x60; — оплата картой по частям (Сплит).
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -51,6 +51,8 @@ class OrdersStatsPaymentSourceType
 
     public const SPASIBO = 'SPASIBO';
 
+    public const SPLIT = 'SPLIT';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -61,7 +63,8 @@ class OrdersStatsPaymentSourceType
             self::BUYER,
             self::CASHBACK,
             self::MARKETPLACE,
-            self::SPASIBO
+            self::SPASIBO,
+            self::SPLIT
         ];
     }
 }

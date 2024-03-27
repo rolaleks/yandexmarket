@@ -443,7 +443,7 @@ class OrderDeliveryDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id Идентификатор доставки, присвоенный магазином.  Указывается, только если магазин передал данный идентификатор в ответе на запрос методом `POST /cart`.
+     * @param string|null $id Идентификатор доставки, присвоенный магазином.  Указывается, только если магазин передал данный идентификатор в ответе на запрос методом [POST cart](../../pushapi/reference/cart.md).
      *
      * @return self
      */
@@ -524,7 +524,7 @@ class OrderDeliveryDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets price
      *
-     * @param float|null $price Стоимость доставки в валюте заказа.  Для отделения целой части от дробной используется точка.
+     * @param float|null $price До 1 июля 2021 в нем возвращалась ваша стоимость доставки заказа. Сейчас Маркет всегда передает в этом поле 0, так как поле устарело и не используется, а стоимость доставки заказа рассчитывает автоматически, по единому тарифу на доставку.  [Подробнее о тарифе на доставку](https://yandex.ru/support/marketplace/orders/dbs/tariffs.html)
      *
      * @return self
      */
@@ -794,7 +794,7 @@ class OrderDeliveryDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets outlet_code
      *
-     * @param string|null $outlet_code Идентификатор пункта самовывоза, выбранного покупателем для получения заказа.  Идентификатор указывается:  * в личном кабинете магазина при создании или редактировании точки продаж.  Параметр указывается, если `type=PICKUP`.
+     * @param string|null $outlet_code Идентификатор пункта самовывоза, присвоенный магазином.
      *
      * @return self
      */
@@ -983,7 +983,7 @@ class OrderDeliveryDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets eac_code
      *
-     * @param string|null $eac_code Код подтверждения ЭАПП (для типа MERCHANT_TO_COURIER).
+     * @param string|null $eac_code Код подтверждения ЭАПП (для типа `MERCHANT_TO_COURIER`).
      *
      * @return self
      */

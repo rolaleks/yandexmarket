@@ -35,7 +35,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * OrderItemSubsidyDTO Class Doc Comment
  *
  * @category Class
- * @description Общее вознаграждение партнеру за все скидки на товар:  * по промокодам; * по купонам; * по баллам кешбэка по подписке Яндекс Плюс; * по акциям.  Передается в валюте заказа, для отделения целой части от дробной используется точка.
+ * @description Общее вознаграждение партнеру за DBS-доставку и все скидки на товар:  * по промокодам; * по купонам; * по баллам Плюса; * по акциям.  Передается в валюте заказа, для отделения целой части от дробной используется точка.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

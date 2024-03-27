@@ -35,7 +35,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * GetOrdersStatsRequest Class Doc Comment
  *
  * @category Class
- * @description Запрос отчета по заказам.
+ * @description Запрос информации по заказам.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -507,7 +507,7 @@ class GetOrdersStatsRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets has_cis
      *
-     * @param bool|null $has_cis Нужно ли вернуть только те заказы, в составе которых есть хотя бы один товар с кодом идентификации из системы «Честный ЗНАК»: `true` — да; `false` — нет. Такие коды присваиваются товарам, которые подлежат маркировке и относятся к определенным категориям.
+     * @param bool|null $has_cis Нужно ли вернуть только те заказы, в составе которых есть хотя бы один товар с кодом идентификации из системы «Честный ЗНАК»: `true` — да. `false` — нет. Такие коды присваиваются товарам, которые подлежат маркировке и относятся к определенным категориям.
      *
      * @return self
      */

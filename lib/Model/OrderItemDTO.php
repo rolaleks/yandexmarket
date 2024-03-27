@@ -59,7 +59,6 @@ class OrderItemDTO implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'feed_id' => 'int',
         'offer_id' => 'string',
         'feed_category_id' => 'string',
         'offer_name' => 'string',
@@ -88,7 +87,6 @@ class OrderItemDTO implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => 'int64',
-        'feed_id' => 'int64',
         'offer_id' => null,
         'feed_category_id' => null,
         'offer_name' => null,
@@ -115,7 +113,6 @@ class OrderItemDTO implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'feed_id' => false,
         'offer_id' => false,
         'feed_category_id' => false,
         'offer_name' => false,
@@ -222,7 +219,6 @@ class OrderItemDTO implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'feed_id' => 'feedId',
         'offer_id' => 'offerId',
         'feed_category_id' => 'feedCategoryId',
         'offer_name' => 'offerName',
@@ -249,7 +245,6 @@ class OrderItemDTO implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'feed_id' => 'setFeedId',
         'offer_id' => 'setOfferId',
         'feed_category_id' => 'setFeedCategoryId',
         'offer_name' => 'setOfferName',
@@ -276,7 +271,6 @@ class OrderItemDTO implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'feed_id' => 'getFeedId',
         'offer_id' => 'getOfferId',
         'feed_category_id' => 'getFeedCategoryId',
         'offer_name' => 'getOfferName',
@@ -354,7 +348,6 @@ class OrderItemDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('feed_id', $data ?? [], null);
         $this->setIfExists('offer_id', $data ?? [], null);
         $this->setIfExists('feed_category_id', $data ?? [], null);
         $this->setIfExists('offer_name', $data ?? [], null);
@@ -453,7 +446,7 @@ class OrderItemDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param int|null $id Идентификатор товара в заказе.
+     * @param int|null $id Идентификатор товара в заказе.  Позволяет идентифицировать товар в рамках данного заказа.
      *
      * @return self
      */
@@ -463,33 +456,6 @@ class OrderItemDTO implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable id cannot be null');
         }
         $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets feed_id
-     *
-     * @return int|null
-     */
-    public function getFeedId()
-    {
-        return $this->container['feed_id'];
-    }
-
-    /**
-     * Sets feed_id
-     *
-     * @param int|null $feed_id Идентификатор каталога товаров.
-     *
-     * @return self
-     */
-    public function setFeedId($feed_id)
-    {
-        if (is_null($feed_id)) {
-            throw new \InvalidArgumentException('non-nullable feed_id cannot be null');
-        }
-        $this->container['feed_id'] = $feed_id;
 
         return $this;
     }
@@ -507,7 +473,7 @@ class OrderItemDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets offer_id
      *
-     * @param string|null $offer_id **Ваш SKU**  Идентификатор товара в магазине. Разрешены английские и русские буквы, цифры и символы `. , / \\ ( ) [ ] - = _`  Максимальная длина — 80 знаков.  [Что такое SKU и как его назначать](https://yandex.ru/support/marketplace/assortment/add/index.html#fields).
+     * @param string|null $offer_id Ваш SKU — идентификатор товара в вашей системе.  Разрешена любая последовательность длиной до 80 знаков. В нее могут входить английские и русские буквы, цифры и символы `. , / \\ ( ) [ ] - = _`  Правила использования SKU:  * У каждого товара SKU должен быть свой.  * SKU товара нельзя менять — можно только удалить товар и добавить заново с новым SKU.  * Уже заданный SKU нельзя освободить и использовать заново для другого товара. Каждый товар должен получать новый идентификатор, до того никогда не использовавшийся в вашем каталоге.  [Что такое SKU и как его назначать](https://yandex.ru/support/marketplace/assortment/add/index.html#fields)
      *
      * @return self
      */
@@ -535,6 +501,7 @@ class OrderItemDTO implements ModelInterface, ArrayAccess, \JsonSerializable
      * Gets feed_category_id
      *
      * @return string|null
+     * @deprecated
      */
     public function getFeedCategoryId()
     {
@@ -544,9 +511,10 @@ class OrderItemDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets feed_category_id
      *
-     * @param string|null $feed_category_id Идентификатор категории, указанный в каталоге.
+     * @param string|null $feed_category_id Идентификатор категории, указанный в каталоге.  {% note alert %}  Параметр устарел и не рекомендуется к использованию.  {% endnote %}
      *
      * @return self
+     * @deprecated
      */
     public function setFeedCategoryId($feed_category_id)
     {
@@ -706,7 +674,7 @@ class OrderItemDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets count
      *
-     * @param int|null $count Количество товара.
+     * @param int|null $count Количество единиц товара.
      *
      * @return self
      */
@@ -760,7 +728,7 @@ class OrderItemDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets shop_sku
      *
-     * @param string|null $shop_sku **Ваш SKU**  Идентификатор товара в магазине. Разрешены английские и русские буквы, цифры и символы `. , / \\ ( ) [ ] - = _`  Максимальная длина — 80 знаков.  [Что такое SKU и как его назначать](https://yandex.ru/support/marketplace/assortment/add/index.html#fields).
+     * @param string|null $shop_sku Ваш SKU — идентификатор товара в вашей системе.  Разрешена любая последовательность длиной до 80 знаков. В нее могут входить английские и русские буквы, цифры и символы `. , / \\ ( ) [ ] - = _`  Правила использования SKU:  * У каждого товара SKU должен быть свой.  * SKU товара нельзя менять — можно только удалить товар и добавить заново с новым SKU.  * Уже заданный SKU нельзя освободить и использовать заново для другого товара. Каждый товар должен получать новый идентификатор, до того никогда не использовавшийся в вашем каталоге.  [Что такое SKU и как его назначать](https://yandex.ru/support/marketplace/assortment/add/index.html#fields)
      *
      * @return self
      */
@@ -797,7 +765,7 @@ class OrderItemDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets subsidy
      *
-     * @param float|null $subsidy Общее вознаграждение партнеру за все скидки на товар:  * по промокодам; * по купонам; * по баллам кешбэка по подписке Яндекс Плюс; * по акциям.  Передается в валюте заказа, для отделения целой части от дробной используется точка.
+     * @param float|null $subsidy Общее вознаграждение партнеру за DBS-доставку и все скидки на товар:  * по промокодам; * по купонам; * по баллам Плюса; * по акциям.  Передается в валюте заказа, для отделения целой части от дробной используется точка.
      *
      * @return self
      */
@@ -878,7 +846,7 @@ class OrderItemDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets instances
      *
-     * @param \OpenAPI\Client\Model\OrderItemInstanceDTO[]|null $instances Информация о маркировке единиц товара.  Возвращаются данные для маркировки, переданные в запросе `PUT /campaigns/{campaignId}/orders/{orderId}/cis`.  Если магазин еще не передавал коды для этого заказа, `instances` отсутствует.
+     * @param \OpenAPI\Client\Model\OrderItemInstanceDTO[]|null $instances Информация о маркировке единиц товара.  Возвращаются данные для маркировки, переданные в запросе [PUT campaigns/{campaignId}/orders/{orderId}/cis](../../reference/orders/provideOrderItemCis.md).  Если магазин еще не передавал коды для этого заказа, `instances` отсутствует.
      *
      * @return self
      */

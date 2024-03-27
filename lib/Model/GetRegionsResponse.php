@@ -309,7 +309,7 @@ class GetRegionsResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets regions
      *
-     * @param \OpenAPI\Client\Model\RegionDTO[]|null $regions Информация о регионах.
+     * @param \OpenAPI\Client\Model\RegionDTO[]|null $regions Регион доставки.
      *
      * @return self
      */

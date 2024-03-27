@@ -58,7 +58,7 @@ class GetOrderBuyerInfoResponse implements ModelInterface, ArrayAccess, \JsonSer
       */
     protected static $openAPITypes = [
         'status' => '\OpenAPI\Client\Model\ApiResponseStatusType',
-        'result' => '\OpenAPI\Client\Model\OrderBuyerDTO'
+        'result' => '\OpenAPI\Client\Model\OrderBuyerInfoDTO'
     ];
 
     /**
@@ -326,7 +326,7 @@ class GetOrderBuyerInfoResponse implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets result
      *
-     * @return \OpenAPI\Client\Model\OrderBuyerDTO|null
+     * @return \OpenAPI\Client\Model\OrderBuyerInfoDTO|null
      */
     public function getResult()
     {
@@ -336,7 +336,7 @@ class GetOrderBuyerInfoResponse implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets result
      *
-     * @param \OpenAPI\Client\Model\OrderBuyerDTO|null $result result
+     * @param \OpenAPI\Client\Model\OrderBuyerInfoDTO|null $result result
      *
      * @return self
      */

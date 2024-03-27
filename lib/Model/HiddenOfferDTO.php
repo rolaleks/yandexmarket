@@ -58,12 +58,7 @@ class HiddenOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'feed_id' => 'int',
-        'offer_id' => 'string',
-        'ttl_in_hours' => 'int',
-        'comment' => 'string',
-        'market_sku' => 'int',
-        'priority' => 'bool'
+        'offer_id' => 'string'
     ];
 
     /**
@@ -74,12 +69,7 @@ class HiddenOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'feed_id' => 'int64',
-        'offer_id' => null,
-        'ttl_in_hours' => null,
-        'comment' => null,
-        'market_sku' => 'int64',
-        'priority' => null
+        'offer_id' => null
     ];
 
     /**
@@ -88,12 +78,7 @@ class HiddenOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'feed_id' => false,
-        'offer_id' => false,
-        'ttl_in_hours' => false,
-        'comment' => false,
-        'market_sku' => false,
-        'priority' => false
+        'offer_id' => false
     ];
 
     /**
@@ -182,12 +167,7 @@ class HiddenOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'feed_id' => 'feedId',
-        'offer_id' => 'offerId',
-        'ttl_in_hours' => 'ttlInHours',
-        'comment' => 'comment',
-        'market_sku' => 'marketSku',
-        'priority' => 'priority'
+        'offer_id' => 'offerId'
     ];
 
     /**
@@ -196,12 +176,7 @@ class HiddenOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'feed_id' => 'setFeedId',
-        'offer_id' => 'setOfferId',
-        'ttl_in_hours' => 'setTtlInHours',
-        'comment' => 'setComment',
-        'market_sku' => 'setMarketSku',
-        'priority' => 'setPriority'
+        'offer_id' => 'setOfferId'
     ];
 
     /**
@@ -210,12 +185,7 @@ class HiddenOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'feed_id' => 'getFeedId',
-        'offer_id' => 'getOfferId',
-        'ttl_in_hours' => 'getTtlInHours',
-        'comment' => 'getComment',
-        'market_sku' => 'getMarketSku',
-        'priority' => 'getPriority'
+        'offer_id' => 'getOfferId'
     ];
 
     /**
@@ -275,12 +245,7 @@ class HiddenOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('feed_id', $data ?? [], null);
         $this->setIfExists('offer_id', $data ?? [], null);
-        $this->setIfExists('ttl_in_hours', $data ?? [], null);
-        $this->setIfExists('comment', $data ?? [], null);
-        $this->setIfExists('market_sku', $data ?? [], null);
-        $this->setIfExists('priority', $data ?? [], null);
     }
 
     /**
@@ -338,33 +303,6 @@ class HiddenOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets feed_id
-     *
-     * @return int|null
-     */
-    public function getFeedId()
-    {
-        return $this->container['feed_id'];
-    }
-
-    /**
-     * Sets feed_id
-     *
-     * @param int|null $feed_id feed_id
-     *
-     * @return self
-     */
-    public function setFeedId($feed_id)
-    {
-        if (is_null($feed_id)) {
-            throw new \InvalidArgumentException('non-nullable feed_id cannot be null');
-        }
-        $this->container['feed_id'] = $feed_id;
-
-        return $this;
-    }
-
-    /**
      * Gets offer_id
      *
      * @return string|null
@@ -377,7 +315,7 @@ class HiddenOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets offer_id
      *
-     * @param string|null $offer_id **Ваш SKU**  Идентификатор товара в магазине. Разрешены английские и русские буквы, цифры и символы `. , / \\ ( ) [ ] - = _`  Максимальная длина — 80 знаков.  [Что такое SKU и как его назначать](https://yandex.ru/support/marketplace/assortment/add/index.html#fields).
+     * @param string|null $offer_id Ваш SKU — идентификатор товара в вашей системе.  Разрешена любая последовательность длиной до 80 знаков. В нее могут входить английские и русские буквы, цифры и символы `. , / \\ ( ) [ ] - = _`  Правила использования SKU:  * У каждого товара SKU должен быть свой.  * SKU товара нельзя менять — можно только удалить товар и добавить заново с новым SKU.  * Уже заданный SKU нельзя освободить и использовать заново для другого товара. Каждый товар должен получать новый идентификатор, до того никогда не использовавшийся в вашем каталоге.  [Что такое SKU и как его назначать](https://yandex.ru/support/marketplace/assortment/add/index.html#fields)
      *
      * @return self
      */
@@ -397,120 +335,6 @@ class HiddenOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         $this->container['offer_id'] = $offer_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets ttl_in_hours
-     *
-     * @return int|null
-     * @deprecated
-     */
-    public function getTtlInHours()
-    {
-        return $this->container['ttl_in_hours'];
-    }
-
-    /**
-     * Sets ttl_in_hours
-     *
-     * @param int|null $ttl_in_hours {% note alert \"Это поле устарело\" %}  Не используйте его — это может привести к ошибкам.  {% endnote %}  Количество часов до возобновления показа товара.  Минимальное значение — `1`.  Максимальное значение — `720`.  Значение по умолчанию — `48`.  Используется только совместно с параметром `priority=\"true\"`.
-     *
-     * @return self
-     * @deprecated
-     */
-    public function setTtlInHours($ttl_in_hours)
-    {
-        if (is_null($ttl_in_hours)) {
-            throw new \InvalidArgumentException('non-nullable ttl_in_hours cannot be null');
-        }
-        $this->container['ttl_in_hours'] = $ttl_in_hours;
-
-        return $this;
-    }
-
-    /**
-     * Gets comment
-     *
-     * @return string|null
-     * @deprecated
-     */
-    public function getComment()
-    {
-        return $this->container['comment'];
-    }
-
-    /**
-     * Sets comment
-     *
-     * @param string|null $comment {% note alert \"Это поле устарело\" %}  Не используйте его — это может привести к ошибкам.  {% endnote %}  Комментарий магазина.  Максимальная длина комментария — 100 символов.  Используется только совместно с параметром `priority=\"true\"`. Если скрытие было без приоритета, комментарий не вернется в ответе.
-     *
-     * @return self
-     * @deprecated
-     */
-    public function setComment($comment)
-    {
-        if (is_null($comment)) {
-            throw new \InvalidArgumentException('non-nullable comment cannot be null');
-        }
-        $this->container['comment'] = $comment;
-
-        return $this;
-    }
-
-    /**
-     * Gets market_sku
-     *
-     * @return int|null
-     */
-    public function getMarketSku()
-    {
-        return $this->container['market_sku'];
-    }
-
-    /**
-     * Sets market_sku
-     *
-     * @param int|null $market_sku SKU на Маркете.
-     *
-     * @return self
-     */
-    public function setMarketSku($market_sku)
-    {
-        if (is_null($market_sku)) {
-            throw new \InvalidArgumentException('non-nullable market_sku cannot be null');
-        }
-        $this->container['market_sku'] = $market_sku;
-
-        return $this;
-    }
-
-    /**
-     * Gets priority
-     *
-     * @return bool|null
-     * @deprecated
-     */
-    public function getPriority()
-    {
-        return $this->container['priority'];
-    }
-
-    /**
-     * Sets priority
-     *
-     * @param bool|null $priority {% note alert \"Это поле устарело\" %}  Не используйте его — это может привести к ошибкам.  {% endnote %}  Приоритет скрытия предложений через API над скрытием в личном кабинете. Параметр принимает только значение true.
-     *
-     * @return self
-     * @deprecated
-     */
-    public function setPriority($priority)
-    {
-        if (is_null($priority)) {
-            throw new \InvalidArgumentException('non-nullable priority cannot be null');
-        }
-        $this->container['priority'] = $priority;
 
         return $this;
     }

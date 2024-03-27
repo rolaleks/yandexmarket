@@ -386,7 +386,7 @@ class ReturnDecisionDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets count
      *
-     * @param int|null $count Количество товаров.
+     * @param int|null $count Количество единиц товара.
      *
      * @return self
      */

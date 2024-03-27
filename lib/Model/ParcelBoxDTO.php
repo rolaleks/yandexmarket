@@ -282,7 +282,7 @@ class ParcelBoxDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['fulfilment_id']) && !preg_match("/^[a-zA-Z0-9\- ]*$/", $this->container['fulfilment_id'])) {
+        if (!is_null($this->container['fulfilment_id']) && !preg_match("/^[\\p{Alnum}- ]*$/", $this->container['fulfilment_id'])) {
             $invalidProperties[] = "invalid value for 'fulfilment_id', must be conform to the pattern /^[\\p{Alnum}- ]*$/.";
         }
 
@@ -351,7 +351,7 @@ class ParcelBoxDTO implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable fulfilment_id cannot be null');
         }
 
-        if ((!preg_match("/^[a-zA-Z0-9\- ]*$/", ObjectSerializer::toString($fulfilment_id)))) {
+        if ((!preg_match("/^[\\p{Alnum}- ]*$/", ObjectSerializer::toString($fulfilment_id)))) {
             throw new \InvalidArgumentException("invalid value for \$fulfilment_id when calling ParcelBoxDTO., must conform to the pattern /^[\\p{Alnum}- ]*$/.");
         }
 

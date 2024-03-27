@@ -66,7 +66,7 @@ class GoodsStatsGoodsDTO implements ModelInterface, ArrayAccess, \JsonSerializab
         'category_name' => 'string',
         'weight_dimensions' => '\OpenAPI\Client\Model\GoodsStatsWeightDimensionsDTO',
         'warehouses' => '\OpenAPI\Client\Model\GoodsStatsWarehouseDTO[]',
-        'tariffs' => '\OpenAPI\Client\Model\GoodsStatsTariffDTO[]',
+        'tariffs' => '\OpenAPI\Client\Model\TariffDTO[]',
         'pictures' => 'string[]'
     ];
 
@@ -378,7 +378,7 @@ class GoodsStatsGoodsDTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets shop_sku
      *
-     * @param string|null $shop_sku **Ваш SKU**  Идентификатор товара в магазине. Разрешены английские и русские буквы, цифры и символы `. , / \\ ( ) [ ] - = _`  Максимальная длина — 80 знаков.  [Что такое SKU и как его назначать](https://yandex.ru/support/marketplace/assortment/add/index.html#fields).
+     * @param string|null $shop_sku Ваш SKU — идентификатор товара в вашей системе.  Разрешена любая последовательность длиной до 80 знаков. В нее могут входить английские и русские буквы, цифры и символы `. , / \\ ( ) [ ] - = _`  Правила использования SKU:  * У каждого товара SKU должен быть свой.  * SKU товара нельзя менять — можно только удалить товар и добавить заново с новым SKU.  * Уже заданный SKU нельзя освободить и использовать заново для другого товара. Каждый товар должен получать новый идентификатор, до того никогда не использовавшийся в вашем каталоге.  [Что такое SKU и как его назначать](https://yandex.ru/support/marketplace/assortment/add/index.html#fields)
      *
      * @return self
      */
@@ -594,7 +594,7 @@ class GoodsStatsGoodsDTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets tariffs
      *
-     * @return \OpenAPI\Client\Model\GoodsStatsTariffDTO[]|null
+     * @return \OpenAPI\Client\Model\TariffDTO[]|null
      */
     public function getTariffs()
     {
@@ -604,7 +604,7 @@ class GoodsStatsGoodsDTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets tariffs
      *
-     * @param \OpenAPI\Client\Model\GoodsStatsTariffDTO[]|null $tariffs Информация о тарифах, по которым нужно заплатить за услуги Маркета.
+     * @param \OpenAPI\Client\Model\TariffDTO[]|null $tariffs Информация о тарифах, по которым нужно заплатить за услуги Маркета.  По некоторым услугам могут возвращаться несколько разных стоимостей. Например, в модели FBS стоимость услуги `SORTING` (обработка заказа) зависит от способа отгрузки и количества заказов в отгрузке. Подробнее о тарифах на услуги читайте [в Справке для продавцов](https://yandex.ru/support2/marketplace/ru/introduction/rates/models/).
      *
      * @return self
      */

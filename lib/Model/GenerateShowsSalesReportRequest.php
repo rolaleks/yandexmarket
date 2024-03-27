@@ -340,7 +340,7 @@ class GenerateShowsSalesReportRequest implements ModelInterface, ArrayAccess, \J
     /**
      * Sets business_id
      *
-     * @param int|null $business_id Идентификатор бизнеса.   Указывается, если нужно составить отчет по всем магазинам бизнеса. В запросе обязательно должен быть либо `businessID`, либо `campaignId`, но не оба сразу.
+     * @param int|null $business_id Идентификатор бизнеса.  Указывается, если нужно составить отчет по всем магазинам бизнеса. В запросе обязательно должен быть либо `businessID`, либо `campaignId`, но не оба сразу.
      *
      * @return self
      */
@@ -367,7 +367,7 @@ class GenerateShowsSalesReportRequest implements ModelInterface, ArrayAccess, \J
     /**
      * Sets campaign_id
      *
-     * @param int|null $campaign_id Идентификатор кампании.   Указывается, если нужно составить отчет по конкретному магазину. В запросе обязательно должен быть либо `businessID`, либо `campaignId`, но не оба сразу.
+     * @param int|null $campaign_id Идентификатор кампании.  Указывается, если нужно составить отчет по конкретному магазину. В запросе обязательно должен быть либо `businessID`, либо `campaignId`, но не оба сразу.
      *
      * @return self
      */

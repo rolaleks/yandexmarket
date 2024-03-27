@@ -59,7 +59,7 @@ class UpdatePriceWithDiscountDTO implements ModelInterface, ArrayAccess, \JsonSe
       */
     protected static $openAPITypes = [
         'value' => 'float',
-        'currency_id' => 'string',
+        'currency_id' => '\OpenAPI\Client\Model\CurrencyType',
         'discount_base' => 'float'
     ];
 
@@ -353,7 +353,7 @@ class UpdatePriceWithDiscountDTO implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets currency_id
      *
-     * @return string
+     * @return \OpenAPI\Client\Model\CurrencyType
      */
     public function getCurrencyId()
     {
@@ -363,7 +363,7 @@ class UpdatePriceWithDiscountDTO implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets currency_id
      *
-     * @param string $currency_id Валюта.  Если `BasePriceDTO` присутствует в запросе, указывайте `RUR` — российский рубль.
+     * @param \OpenAPI\Client\Model\CurrencyType $currency_id currency_id
      *
      * @return self
      */
@@ -390,7 +390,7 @@ class UpdatePriceWithDiscountDTO implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets discount_base
      *
-     * @param float|null $discount_base Цена до скидки.
+     * @param float|null $discount_base Цена до скидки.  Число должно быть целым. Вы можете указать цену со скидкой от 5 до 75%.  Передавайте этот параметр при каждом обновлении цены, если предоставляете скидку на товар.
      *
      * @return self
      */

@@ -327,7 +327,7 @@ class OrderItemModificationDTO implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets id
      *
-     * @param int $id Идентификатор товара в рамках заказа.  Получить идентификатор можно с помощью ресурсов `GET /campaigns/{campaignId}/orders` или `GET /campaigns/{campaignId}/orders/{orderId}`.  Обязательный параметр.
+     * @param int $id Идентификатор товара в рамках заказа.  Получить идентификатор можно с помощью ресурсов [GET campaigns/{campaignId}/orders](../../reference/orders/getOrders.md) или [GET campaigns/{campaignId}/orders/{orderId}](../../reference/orders/getOrder.md).  Обязательный параметр.
      *
      * @return self
      */

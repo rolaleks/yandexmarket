@@ -35,7 +35,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * OutletWorkingScheduleDTO Class Doc Comment
  *
  * @category Class
- * @description Список режимов работы точки продаж. Обязательный параметр.
+ * @description Список режимов работы точки продаж.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -344,7 +344,7 @@ class OutletWorkingScheduleDTO implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets schedule_items
      *
-     * @param \OpenAPI\Client\Model\OutletWorkingScheduleItemDTO[] $schedule_items Список расписаний работы точки продаж. Обязательный параметр.
+     * @param \OpenAPI\Client\Model\OutletWorkingScheduleItemDTO[] $schedule_items Список расписаний работы точки продаж.
      *
      * @return self
      */

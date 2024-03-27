@@ -33,7 +33,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * OrderBuyerType Class Doc Comment
  *
  * @category Class
- * @description Кто покупатель:  * &#x60;PERSON&#x60; — физическое лицо; * &#x60;BUSINESS&#x60; — организация.
+ * @description Тип покупателя:  * &#x60;PERSON&#x60; — физическое лицо. * &#x60;BUSINESS&#x60; — организация.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

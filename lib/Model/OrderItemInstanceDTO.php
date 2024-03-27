@@ -35,7 +35,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * OrderItemInstanceDTO Class Doc Comment
  *
  * @category Class
- * @description Переданные вами для данной позиции коды маркировки или УИНы. Коды \&quot;Честного знака\&quot; возвращаются в двух вариантах — с криптохвостом и без.
+ * @description Переданные вами для данной позиции коды маркировки или УИНы. Коды «Честного знака» возвращаются в двух вариантах — с криптохвостом и без.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -331,7 +331,7 @@ class OrderItemInstanceDTO implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets cis
      *
-     * @param string|null $cis Код «Честного знака» без криптохвоста.
+     * @param string|null $cis Код идентификации единицы товара [в системе «Честный ЗНАК»](https://честныйзнак.рф/) без криптохвоста.
      *
      * @return self
      */
@@ -358,7 +358,7 @@ class OrderItemInstanceDTO implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets cis_full
      *
-     * @param string|null $cis_full Код «Честного знака» с криптохвостом.
+     * @param string|null $cis_full Код идентификации единицы товара [в системе «Честный ЗНАК»](https://честныйзнак.рф/) с криптохвостом.
      *
      * @return self
      */

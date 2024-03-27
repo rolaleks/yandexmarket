@@ -388,7 +388,7 @@ class OrderItemPromoDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets subsidy
      *
-     * @param float|null $subsidy Вознаграждение партнеру за скидку.  Передается в валюте заказа, для отделения целой части от дробной используется точка.
+     * @param float|null $subsidy Вознаграждение партнеру от Маркета за товар, проданный в рамках акции.  Передается в валюте заказа, для отделения целой части от дробной используется точка.
      *
      * @return self
      */
@@ -442,7 +442,7 @@ class OrderItemPromoDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets market_promo_id
      *
-     * @param string|null $market_promo_id Идентификатор акции в рамках соглашения на оказание услуг по продвижению сервиса между маркетплейсом Яндекс Маркета и партнером.  Параметр передается, только если параметр `type=MARKET_DEAL`.
+     * @param string|null $market_promo_id Идентификатор акции в рамках соглашения на оказание услуг по продвижению сервиса между Маркетом и партнером.  Параметр передается, только если параметр `type=MARKET_DEAL`.
      *
      * @return self
      */

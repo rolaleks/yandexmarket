@@ -60,7 +60,7 @@ class GetPriceWithVatDTO implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $openAPITypes = [
         'value' => 'float',
         'discount_base' => 'float',
-        'currency_id' => 'string',
+        'currency_id' => '\OpenAPI\Client\Model\CurrencyType',
         'vat' => 'int',
         'updated_at' => '\DateTime'
     ];
@@ -361,7 +361,7 @@ class GetPriceWithVatDTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets discount_base
      *
-     * @param float|null $discount_base Цена на товар без скидки.
+     * @param float|null $discount_base Цена на товар без скидки.  Число должно быть целым. Вы можете указать цену со скидкой от 5 до 75%.  Передавайте этот параметр при каждом обновлении цены, если предоставляете скидку на товар.
      *
      * @return self
      */
@@ -378,7 +378,7 @@ class GetPriceWithVatDTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets currency_id
      *
-     * @return string|null
+     * @return \OpenAPI\Client\Model\CurrencyType|null
      */
     public function getCurrencyId()
     {
@@ -388,7 +388,7 @@ class GetPriceWithVatDTO implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets currency_id
      *
-     * @param string|null $currency_id Валюта, в которой указана цена на товар.  Возможно только значение RUR — российский рубль.
+     * @param \OpenAPI\Client\Model\CurrencyType|null $currency_id currency_id
      *
      * @return self
      */

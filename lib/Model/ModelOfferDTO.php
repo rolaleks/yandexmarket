@@ -447,7 +447,7 @@ class ModelOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets pre_discount_price
      *
-     * @param float|null $pre_discount_price Цена предложения без скидки.
+     * @param float|null $pre_discount_price Цена предложения без скидки магазина.
      *
      * @return self
      */
@@ -474,7 +474,7 @@ class ModelOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets price
      *
-     * @param float|null $price Цена предложения.  До версии 2.0 партнерского API у параметра был тип String.
+     * @param float|null $price Цена предложения без скидки, которую получает покупатель при оплате через Yandex Pay.
      *
      * @return self
      */

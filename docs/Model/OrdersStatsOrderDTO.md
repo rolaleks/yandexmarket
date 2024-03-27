@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **status** | [**\OpenAPI\Client\Model\OrderStatsStatusType**](OrderStatsStatusType.md) |  | [optional]
 **partner_order_id** | **string** | Идентификатор заказа в информационной системе магазина. | [optional]
 **payment_type** | [**\OpenAPI\Client\Model\OrdersStatsOrderPaymentType**](OrdersStatsOrderPaymentType.md) |  | [optional]
-**fake** | **bool** | Тип заказа:  * false — заказ покупателя.  * true — тестовый заказ Маркета. | [optional]
+**fake** | **bool** | Тип заказа:  * &#x60;false&#x60; — настоящий заказ покупателя.  * &#x60;true&#x60; — [тестовый](../../pushapi/concepts/sandbox.md) заказ Маркета. | [optional]
 **delivery_region** | [**\OpenAPI\Client\Model\OrdersStatsDeliveryRegionDTO**](OrdersStatsDeliveryRegionDTO.md) |  | [optional]
 **items** | [**\OpenAPI\Client\Model\OrdersStatsItemDTO[]**](OrdersStatsItemDTO.md) | Список товаров в заказе после возможных изменений. | [optional]
 **initial_items** | [**\OpenAPI\Client\Model\OrdersStatsItemDTO[]**](OrdersStatsItemDTO.md) | Список товаров в заказе до изменений. | [optional]

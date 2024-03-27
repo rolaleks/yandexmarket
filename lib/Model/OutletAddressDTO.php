@@ -35,7 +35,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * OutletAddressDTO Class Doc Comment
  *
  * @category Class
- * @description Адрес точки продаж. Обязательный параметр.
+ * @description Адрес точки продаж.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -386,7 +386,7 @@ class OutletAddressDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets region_id
      *
-     * @param int $region_id Идентификатор региона. Идентификатор можно получить c помощью запроса `GET /regions`.  {% note alert %}  При создании и редактировании точек продаж можно указывать только регионы типов `TOWN` (город), `CITY` (крупный город) и `REPUBLIC_AREA` (район субъекта федерации). Тип региона указан в выходных параметрах type запросов `GET /regions` и `GET /regions/{regionId}`.  {% endnote %}  Обязательный параметр.
+     * @param int $region_id Идентификатор региона. Идентификатор можно получить c помощью запроса [GET regions](../../reference/regions/searchRegionsByName.md).  {% note alert %}  При создании и редактировании точек продаж можно указывать только регионы типов `TOWN` (город), `CITY` (крупный город) и `REPUBLIC_AREA` (район субъекта федерации). Тип региона указан в выходных параметрах type запросов [GET regions](../../reference/regions/searchRegionsByName.md) и [GET regions/{regionId}](../../reference/regions/searchRegionsById.md).  {% endnote %}
      *
      * @return self
      */

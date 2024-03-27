@@ -35,7 +35,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * PickupAddressDTO Class Doc Comment
  *
  * @category Class
- * @description Информация об адресе доставки.
+ * @description Адрес доставки.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

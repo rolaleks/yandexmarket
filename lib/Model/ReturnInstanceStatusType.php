@@ -63,6 +63,8 @@ class ReturnInstanceStatusType
 
     public const PREPARED_FOR_UTILIZATION = 'PREPARED_FOR_UTILIZATION';
 
+    public const EXPROPRIATED = 'EXPROPRIATED';
+
     public const NOT_IN_DEMAND = 'NOT_IN_DEMAND';
 
     /**
@@ -82,6 +84,7 @@ class ReturnInstanceStatusType
             self::LOST,
             self::UTILIZED,
             self::PREPARED_FOR_UTILIZATION,
+            self::EXPROPRIATED,
             self::NOT_IN_DEMAND
         ];
     }

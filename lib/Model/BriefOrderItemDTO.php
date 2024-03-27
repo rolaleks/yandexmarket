@@ -62,7 +62,6 @@ class BriefOrderItemDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
         'vat' => '\OpenAPI\Client\Model\OrderVatType',
         'count' => 'int',
         'price' => 'float',
-        'feed_id' => 'int',
         'feed_category_id' => 'string',
         'offer_name' => 'string',
         'offer_id' => 'string',
@@ -81,7 +80,6 @@ class BriefOrderItemDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
         'vat' => null,
         'count' => 'int32',
         'price' => null,
-        'feed_id' => 'int64',
         'feed_category_id' => null,
         'offer_name' => null,
         'offer_id' => null,
@@ -98,7 +96,6 @@ class BriefOrderItemDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
         'vat' => false,
         'count' => false,
         'price' => false,
-        'feed_id' => false,
         'feed_category_id' => false,
         'offer_name' => false,
         'offer_id' => false,
@@ -195,7 +192,6 @@ class BriefOrderItemDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
         'vat' => 'vat',
         'count' => 'count',
         'price' => 'price',
-        'feed_id' => 'feedId',
         'feed_category_id' => 'feedCategoryId',
         'offer_name' => 'offerName',
         'offer_id' => 'offerId',
@@ -212,7 +208,6 @@ class BriefOrderItemDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
         'vat' => 'setVat',
         'count' => 'setCount',
         'price' => 'setPrice',
-        'feed_id' => 'setFeedId',
         'feed_category_id' => 'setFeedCategoryId',
         'offer_name' => 'setOfferName',
         'offer_id' => 'setOfferId',
@@ -229,7 +224,6 @@ class BriefOrderItemDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
         'vat' => 'getVat',
         'count' => 'getCount',
         'price' => 'getPrice',
-        'feed_id' => 'getFeedId',
         'feed_category_id' => 'getFeedCategoryId',
         'offer_name' => 'getOfferName',
         'offer_id' => 'getOfferId',
@@ -297,7 +291,6 @@ class BriefOrderItemDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
         $this->setIfExists('vat', $data ?? [], null);
         $this->setIfExists('count', $data ?? [], null);
         $this->setIfExists('price', $data ?? [], null);
-        $this->setIfExists('feed_id', $data ?? [], null);
         $this->setIfExists('feed_category_id', $data ?? [], null);
         $this->setIfExists('offer_name', $data ?? [], null);
         $this->setIfExists('offer_id', $data ?? [], null);
@@ -371,7 +364,7 @@ class BriefOrderItemDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets id
      *
-     * @param int|null $id Идентификатор товара в заказе.
+     * @param int|null $id Идентификатор товара в заказе.  Позволяет идентифицировать товар в рамках данного заказа.
      *
      * @return self
      */
@@ -467,36 +460,10 @@ class BriefOrderItemDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets feed_id
-     *
-     * @return int|null
-     */
-    public function getFeedId()
-    {
-        return $this->container['feed_id'];
-    }
-
-    /**
-     * Sets feed_id
-     *
-     * @param int|null $feed_id Идентификатор каталога, в котором указан товар.
-     *
-     * @return self
-     */
-    public function setFeedId($feed_id)
-    {
-        if (is_null($feed_id)) {
-            throw new \InvalidArgumentException('non-nullable feed_id cannot be null');
-        }
-        $this->container['feed_id'] = $feed_id;
-
-        return $this;
-    }
-
-    /**
      * Gets feed_category_id
      *
      * @return string|null
+     * @deprecated
      */
     public function getFeedCategoryId()
     {
@@ -506,9 +473,10 @@ class BriefOrderItemDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets feed_category_id
      *
-     * @param string|null $feed_category_id Идентификатор категории, в которую входит товар.
+     * @param string|null $feed_category_id Идентификатор категории, в которую входит товар.  {% note alert %}  Параметр устарел и не рекомендуется к использованию.  {% endnote %}
      *
      * @return self
+     * @deprecated
      */
     public function setFeedCategoryId($feed_category_id)
     {
@@ -560,7 +528,7 @@ class BriefOrderItemDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets offer_id
      *
-     * @param string|null $offer_id **Ваш SKU**  Идентификатор товара в магазине. Разрешены английские и русские буквы, цифры и символы `. , / \\ ( ) [ ] - = _`  Максимальная длина — 80 знаков.  [Что такое SKU и как его назначать](https://yandex.ru/support/marketplace/assortment/add/index.html#fields).
+     * @param string|null $offer_id Ваш SKU — идентификатор товара в вашей системе.  Разрешена любая последовательность длиной до 80 знаков. В нее могут входить английские и русские буквы, цифры и символы `. , / \\ ( ) [ ] - = _`  Правила использования SKU:  * У каждого товара SKU должен быть свой.  * SKU товара нельзя менять — можно только удалить товар и добавить заново с новым SKU.  * Уже заданный SKU нельзя освободить и использовать заново для другого товара. Каждый товар должен получать новый идентификатор, до того никогда не использовавшийся в вашем каталоге.  [Что такое SKU и как его назначать](https://yandex.ru/support/marketplace/assortment/add/index.html#fields)
      *
      * @return self
      */

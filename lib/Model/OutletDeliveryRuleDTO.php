@@ -58,7 +58,6 @@ class OutletDeliveryRuleDTO implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'cost' => 'float',
         'min_delivery_days' => 'int',
         'max_delivery_days' => 'int',
         'delivery_service_id' => 'int',
@@ -75,7 +74,6 @@ class OutletDeliveryRuleDTO implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'cost' => null,
         'min_delivery_days' => 'int32',
         'max_delivery_days' => 'int32',
         'delivery_service_id' => 'int64',
@@ -90,7 +88,6 @@ class OutletDeliveryRuleDTO implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'cost' => false,
         'min_delivery_days' => false,
         'max_delivery_days' => false,
         'delivery_service_id' => false,
@@ -185,7 +182,6 @@ class OutletDeliveryRuleDTO implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'cost' => 'cost',
         'min_delivery_days' => 'minDeliveryDays',
         'max_delivery_days' => 'maxDeliveryDays',
         'delivery_service_id' => 'deliveryServiceId',
@@ -200,7 +196,6 @@ class OutletDeliveryRuleDTO implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'cost' => 'setCost',
         'min_delivery_days' => 'setMinDeliveryDays',
         'max_delivery_days' => 'setMaxDeliveryDays',
         'delivery_service_id' => 'setDeliveryServiceId',
@@ -215,7 +210,6 @@ class OutletDeliveryRuleDTO implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'cost' => 'getCost',
         'min_delivery_days' => 'getMinDeliveryDays',
         'max_delivery_days' => 'getMaxDeliveryDays',
         'delivery_service_id' => 'getDeliveryServiceId',
@@ -281,7 +275,6 @@ class OutletDeliveryRuleDTO implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('cost', $data ?? [], null);
         $this->setIfExists('min_delivery_days', $data ?? [], null);
         $this->setIfExists('max_delivery_days', $data ?? [], null);
         $this->setIfExists('delivery_service_id', $data ?? [], null);
@@ -339,33 +332,6 @@ class OutletDeliveryRuleDTO implements ModelInterface, ArrayAccess, \JsonSeriali
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets cost
-     *
-     * @return float|null
-     */
-    public function getCost()
-    {
-        return $this->container['cost'];
-    }
-
-    /**
-     * Sets cost
-     *
-     * @param float|null $cost Стоимость самовывоза из точки продаж. Обязательный параметр.
-     *
-     * @return self
-     */
-    public function setCost($cost)
-    {
-        if (is_null($cost)) {
-            throw new \InvalidArgumentException('non-nullable cost cannot be null');
-        }
-        $this->container['cost'] = $cost;
-
-        return $this;
-    }
 
     /**
      * Gets min_delivery_days
@@ -434,7 +400,7 @@ class OutletDeliveryRuleDTO implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets delivery_service_id
      *
-     * @param int|null $delivery_service_id Идентификатор службы доставки товаров в точку продаж. Идентификаторы и наименования служб доставки можно получить с помощью ресурса `GET /delivery/services`.
+     * @param int|null $delivery_service_id Идентификатор службы доставки товаров в точку продаж. Информацию о службе доставки можно получить с помощью запроса [GET delivery/services](../../reference/orders/getDeliveryServices.md).
      *
      * @return self
      */

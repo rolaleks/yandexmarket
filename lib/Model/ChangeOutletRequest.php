@@ -60,14 +60,12 @@ class ChangeOutletRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         'name' => 'string',
         'type' => '\OpenAPI\Client\Model\OutletType',
         'coords' => 'string',
-        'is_main' => 'bool',
         'shop_outlet_code' => 'string',
         'visibility' => '\OpenAPI\Client\Model\OutletVisibilityType',
         'address' => '\OpenAPI\Client\Model\OutletAddressDTO',
         'phones' => 'string[]',
         'working_schedule' => '\OpenAPI\Client\Model\OutletWorkingScheduleDTO',
         'delivery_rules' => '\OpenAPI\Client\Model\OutletDeliveryRuleDTO[]',
-        'emails' => 'string[]',
         'storage_period' => 'int'
     ];
 
@@ -82,14 +80,12 @@ class ChangeOutletRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         'name' => null,
         'type' => null,
         'coords' => null,
-        'is_main' => null,
         'shop_outlet_code' => null,
         'visibility' => null,
         'address' => null,
         'phones' => null,
         'working_schedule' => null,
         'delivery_rules' => null,
-        'emails' => null,
         'storage_period' => 'int64'
     ];
 
@@ -102,14 +98,12 @@ class ChangeOutletRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         'name' => false,
         'type' => false,
         'coords' => false,
-        'is_main' => false,
         'shop_outlet_code' => false,
         'visibility' => false,
         'address' => false,
         'phones' => false,
         'working_schedule' => false,
         'delivery_rules' => false,
-        'emails' => false,
         'storage_period' => false
     ];
 
@@ -202,14 +196,12 @@ class ChangeOutletRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         'name' => 'name',
         'type' => 'type',
         'coords' => 'coords',
-        'is_main' => 'isMain',
         'shop_outlet_code' => 'shopOutletCode',
         'visibility' => 'visibility',
         'address' => 'address',
         'phones' => 'phones',
         'working_schedule' => 'workingSchedule',
         'delivery_rules' => 'deliveryRules',
-        'emails' => 'emails',
         'storage_period' => 'storagePeriod'
     ];
 
@@ -222,14 +214,12 @@ class ChangeOutletRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         'name' => 'setName',
         'type' => 'setType',
         'coords' => 'setCoords',
-        'is_main' => 'setIsMain',
         'shop_outlet_code' => 'setShopOutletCode',
         'visibility' => 'setVisibility',
         'address' => 'setAddress',
         'phones' => 'setPhones',
         'working_schedule' => 'setWorkingSchedule',
         'delivery_rules' => 'setDeliveryRules',
-        'emails' => 'setEmails',
         'storage_period' => 'setStoragePeriod'
     ];
 
@@ -242,14 +232,12 @@ class ChangeOutletRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         'name' => 'getName',
         'type' => 'getType',
         'coords' => 'getCoords',
-        'is_main' => 'getIsMain',
         'shop_outlet_code' => 'getShopOutletCode',
         'visibility' => 'getVisibility',
         'address' => 'getAddress',
         'phones' => 'getPhones',
         'working_schedule' => 'getWorkingSchedule',
         'delivery_rules' => 'getDeliveryRules',
-        'emails' => 'getEmails',
         'storage_period' => 'getStoragePeriod'
     ];
 
@@ -313,14 +301,12 @@ class ChangeOutletRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('coords', $data ?? [], null);
-        $this->setIfExists('is_main', $data ?? [], null);
         $this->setIfExists('shop_outlet_code', $data ?? [], null);
         $this->setIfExists('visibility', $data ?? [], null);
         $this->setIfExists('address', $data ?? [], null);
         $this->setIfExists('phones', $data ?? [], null);
         $this->setIfExists('working_schedule', $data ?? [], null);
         $this->setIfExists('delivery_rules', $data ?? [], null);
-        $this->setIfExists('emails', $data ?? [], null);
         $this->setIfExists('storage_period', $data ?? [], null);
     }
 
@@ -370,10 +356,6 @@ class ChangeOutletRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         if ($this->container['working_schedule'] === null) {
             $invalidProperties[] = "'working_schedule' can't be null";
         }
-        if (!is_null($this->container['emails']) && (count($this->container['emails']) > 1)) {
-            $invalidProperties[] = "invalid value for 'emails', number of items must be less than or equal to 1.";
-        }
-
         return $invalidProperties;
     }
 
@@ -402,7 +384,7 @@ class ChangeOutletRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets name
      *
-     * @param string $name Название точки продаж. Обязательный параметр.
+     * @param string $name Название точки продаж.
      *
      * @return self
      */
@@ -466,33 +448,6 @@ class ChangeOutletRequest implements ModelInterface, ArrayAccess, \JsonSerializa
             throw new \InvalidArgumentException('non-nullable coords cannot be null');
         }
         $this->container['coords'] = $coords;
-
-        return $this;
-    }
-
-    /**
-     * Gets is_main
-     *
-     * @return bool|null
-     */
-    public function getIsMain()
-    {
-        return $this->container['is_main'];
-    }
-
-    /**
-     * Sets is_main
-     *
-     * @param bool|null $is_main Признак основной точки продаж. Возможные значения: * `false` — неосновная точка продаж. * `true` — основная точка продаж.
-     *
-     * @return self
-     */
-    public function setIsMain($is_main)
-    {
-        if (is_null($is_main)) {
-            throw new \InvalidArgumentException('non-nullable is_main cannot be null');
-        }
-        $this->container['is_main'] = $is_main;
 
         return $this;
     }
@@ -591,7 +546,7 @@ class ChangeOutletRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets phones
      *
-     * @param string[] $phones Номера телефонов точки продаж. Передавайте в формате: `+7 (999) 999-99-99`. Обязательный параметр.
+     * @param string[] $phones Номера телефонов точки продаж. Передавайте в формате: `+7 (999) 999-99-99`.
      *
      * @return self
      */
@@ -660,37 +615,6 @@ class ChangeOutletRequest implements ModelInterface, ArrayAccess, \JsonSerializa
             throw new \InvalidArgumentException('non-nullable delivery_rules cannot be null');
         }
         $this->container['delivery_rules'] = $delivery_rules;
-
-        return $this;
-    }
-
-    /**
-     * Gets emails
-     *
-     * @return string[]|null
-     */
-    public function getEmails()
-    {
-        return $this->container['emails'];
-    }
-
-    /**
-     * Sets emails
-     *
-     * @param string[]|null $emails Адрес электронной почты точки продаж. Может содержать только один параметр `email`.
-     *
-     * @return self
-     */
-    public function setEmails($emails)
-    {
-        if (is_null($emails)) {
-            throw new \InvalidArgumentException('non-nullable emails cannot be null');
-        }
-
-        if ((count($emails) > 1)) {
-            throw new \InvalidArgumentException('invalid value for $emails when calling ChangeOutletRequest., number of items must be less than or equal to 1.');
-        }
-        $this->container['emails'] = $emails;
 
         return $this;
     }

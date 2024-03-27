@@ -33,7 +33,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * OfferContentErrorType Class Doc Comment
  *
  * @category Class
- * @description Типы ошибок:  * &#x60;OFFER_NOT_FOUND&#x60; — такого товара нет в каталоге; * &#x60;UNKNOWN_CATEGORY&#x60; — указана неизвестная категория; * &#x60;CATEGORY_MISMATCH&#x60; — указанная категория не совпадает с категорией товара; * &#x60;UNKNOWN_PARAMETER&#x60; — передана характеристика, отсутствующая среди характеристик категории; * &#x60;UNEXPECTED_BOOLEAN_VALUE&#x60; — вместо boolean-значения передано что-то другое; * &#x60;NUMBER_FORMAT&#x60; — передана строка, не обозначающая число, вместо числа; * &#x60;VALUE_BLANK&#x60; — передано пустое значение.
+ * @description Типы ошибок:  * &#x60;OFFER_NOT_FOUND&#x60; — такого товара нет в каталоге; * &#x60;UNKNOWN_CATEGORY&#x60; — указана неизвестная категория; * &#x60;CATEGORY_MISMATCH&#x60; — указанная категория не совпадает с категорией товара; * &#x60;UNKNOWN_PARAMETER&#x60; — передана характеристика, отсутствующая среди характеристик категории; * &#x60;UNEXPECTED_BOOLEAN_VALUE&#x60; — вместо boolean-значения передано что-то другое; * &#x60;NUMBER_FORMAT&#x60; — передана строка, не обозначающая число, вместо числа; * &#x60;VALUE_BLANK&#x60; — передано пустое значение. * &#x60;INVALID_UNIT_ID&#x60; — переданная единица измерения недопустима для характеристики.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -57,6 +57,8 @@ class OfferContentErrorType
 
     public const VALUE_BLANK = 'VALUE_BLANK';
 
+    public const INVALID_UNIT_ID = 'INVALID_UNIT_ID';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -70,7 +72,8 @@ class OfferContentErrorType
             self::UNKNOWN_PARAMETER,
             self::UNEXPECTED_BOOLEAN_VALUE,
             self::NUMBER_FORMAT,
-            self::VALUE_BLANK
+            self::VALUE_BLANK,
+            self::INVALID_UNIT_ID
         ];
     }
 }

@@ -439,7 +439,7 @@ class OrderCourierDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets vehicle_description
      *
-     * @param string|null $vehicle_description Полное имя курьера.
+     * @param string|null $vehicle_description Описание машины. Например, модель и цвет.
      *
      * @return self
      */

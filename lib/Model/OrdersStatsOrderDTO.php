@@ -542,7 +542,7 @@ class OrdersStatsOrderDTO implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets fake
      *
-     * @param bool|null $fake Тип заказа:  * false — заказ покупателя.  * true — тестовый заказ Маркета.
+     * @param bool|null $fake Тип заказа:  * `false` — настоящий заказ покупателя.  * `true` — [тестовый](../../pushapi/concepts/sandbox.md) заказ Маркета.
      *
      * @return self
      */

@@ -61,13 +61,9 @@ class OrderStatusType
 
     public const PENDING = 'PENDING';
 
-    public const REJECTED = 'REJECTED';
-
     public const PARTIALLY_RETURNED = 'PARTIALLY_RETURNED';
 
     public const RETURNED = 'RETURNED';
-
-    public const CANCELLED_WITHOUT_REFUND = 'CANCELLED_WITHOUT_REFUND';
 
     public const UNKNOWN = 'UNKNOWN';
 
@@ -87,10 +83,8 @@ class OrderStatusType
             self::DELIVERED,
             self::CANCELLED,
             self::PENDING,
-            self::REJECTED,
             self::PARTIALLY_RETURNED,
             self::RETURNED,
-            self::CANCELLED_WITHOUT_REFUND,
             self::UNKNOWN
         ];
     }

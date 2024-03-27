@@ -342,7 +342,7 @@ class SetOrderDeliveryTrackCodeRequest implements ModelInterface, ArrayAccess, \
     /**
      * Sets delivery_service_id
      *
-     * @param int $delivery_service_id Идентификатор службы доставки.
+     * @param int $delivery_service_id Идентификатор службы доставки. Информацию о службе доставки можно получить с помощью запроса [GET delivery/services](../../reference/orders/getDeliveryServices.md).
      *
      * @return self
      */

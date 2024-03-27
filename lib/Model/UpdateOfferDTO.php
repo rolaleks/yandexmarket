@@ -63,6 +63,7 @@ class UpdateOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         'category' => 'string',
         'pictures' => 'string[]',
         'videos' => 'string[]',
+        'manuals' => '\OpenAPI\Client\Model\OfferManualDTO[]',
         'vendor' => 'string',
         'barcodes' => 'string[]',
         'description' => 'string',
@@ -100,6 +101,7 @@ class UpdateOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         'category' => null,
         'pictures' => null,
         'videos' => null,
+        'manuals' => null,
         'vendor' => null,
         'barcodes' => null,
         'description' => null,
@@ -135,6 +137,7 @@ class UpdateOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         'category' => false,
         'pictures' => false,
         'videos' => false,
+        'manuals' => false,
         'vendor' => false,
         'barcodes' => false,
         'description' => false,
@@ -250,6 +253,7 @@ class UpdateOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         'category' => 'category',
         'pictures' => 'pictures',
         'videos' => 'videos',
+        'manuals' => 'manuals',
         'vendor' => 'vendor',
         'barcodes' => 'barcodes',
         'description' => 'description',
@@ -285,6 +289,7 @@ class UpdateOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         'category' => 'setCategory',
         'pictures' => 'setPictures',
         'videos' => 'setVideos',
+        'manuals' => 'setManuals',
         'vendor' => 'setVendor',
         'barcodes' => 'setBarcodes',
         'description' => 'setDescription',
@@ -320,6 +325,7 @@ class UpdateOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         'category' => 'getCategory',
         'pictures' => 'getPictures',
         'videos' => 'getVideos',
+        'manuals' => 'getManuals',
         'vendor' => 'getVendor',
         'barcodes' => 'getBarcodes',
         'description' => 'getDescription',
@@ -406,6 +412,7 @@ class UpdateOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('category', $data ?? [], null);
         $this->setIfExists('pictures', $data ?? [], null);
         $this->setIfExists('videos', $data ?? [], null);
+        $this->setIfExists('manuals', $data ?? [], null);
         $this->setIfExists('vendor', $data ?? [], null);
         $this->setIfExists('barcodes', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
@@ -472,12 +479,16 @@ class UpdateOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'offer_id', must be conform to the pattern /^[0-9a-zа-яА-ЯA-ZёËëЁ.,\\\\\/()\\[\\]\\-=_]{1,80}$/.";
         }
 
-        if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 150)) {
-            $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 150.";
+        if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 256)) {
+            $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 256.";
         }
 
         if (!is_null($this->container['videos']) && (count($this->container['videos']) > 1)) {
             $invalidProperties[] = "invalid value for 'videos', number of items must be less than or equal to 1.";
+        }
+
+        if (!is_null($this->container['manuals']) && (count($this->container['manuals']) > 6)) {
+            $invalidProperties[] = "invalid value for 'manuals', number of items must be less than or equal to 6.";
         }
 
         if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 6000)) {
@@ -512,7 +523,7 @@ class UpdateOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets offer_id
      *
-     * @param string $offer_id **Ваш SKU**  Идентификатор товара в магазине. Разрешены английские и русские буквы, цифры и символы `. , / \\ ( ) [ ] - = _`  Максимальная длина — 80 знаков.  [Что такое SKU и как его назначать](https://yandex.ru/support/marketplace/assortment/add/index.html#fields).
+     * @param string $offer_id Ваш SKU — идентификатор товара в вашей системе.  Разрешена любая последовательность длиной до 80 знаков. В нее могут входить английские и русские буквы, цифры и символы `. , / \\ ( ) [ ] - = _`  Правила использования SKU:  * У каждого товара SKU должен быть свой.  * SKU товара нельзя менять — можно только удалить товар и добавить заново с новым SKU.  * Уже заданный SKU нельзя освободить и использовать заново для другого товара. Каждый товар должен получать новый идентификатор, до того никогда не использовавшийся в вашем каталоге.  [Что такое SKU и как его назначать](https://yandex.ru/support/marketplace/assortment/add/index.html#fields)
      *
      * @return self
      */
@@ -549,7 +560,7 @@ class UpdateOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets name
      *
-     * @param string|null $name Составляйте название по схеме: тип + бренд или производитель + модель + особенности, если есть (например, цвет, размер или вес) и количество в упаковке.  Не включайте в название условия продажи (например, «скидка», «бесплатная доставка» и т. д.), эмоциональные характеристики («хит», «супер» и т. д.). Не пишите слова большими буквами — кроме устоявшихся названий брендов и моделей.  Оптимальная длина — 50–60 символов, максимальная — 150.  [Рекомендации и правила](https://yandex.ru/support/marketplace/assortment/fields/title.html)
+     * @param string|null $name Составляйте название по схеме: тип + бренд или производитель + модель + особенности, если есть (например, цвет, размер или вес) и количество в упаковке.  Не включайте в название условия продажи (например, «скидка», «бесплатная доставка» и т. д.), эмоциональные характеристики («хит», «супер» и т. д.). Не пишите слова большими буквами — кроме устоявшихся названий брендов и моделей.  Оптимальная длина — 50–60 символов, максимальная — 256.  [Рекомендации и правила](https://yandex.ru/support/marketplace/assortment/fields/title.html)
      *
      * @return self
      */
@@ -558,8 +569,8 @@ class UpdateOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializable
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
         }
-        if ((mb_strlen($name) > 150)) {
-            throw new \InvalidArgumentException('invalid length for $name when calling UpdateOfferDTO., must be smaller than or equal to 150.');
+        if ((mb_strlen($name) > 256)) {
+            throw new \InvalidArgumentException('invalid length for $name when calling UpdateOfferDTO., must be smaller than or equal to 256.');
         }
 
         $this->container['name'] = $name;
@@ -648,6 +659,37 @@ class UpdateOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('invalid value for $videos when calling UpdateOfferDTO., number of items must be less than or equal to 1.');
         }
         $this->container['videos'] = $videos;
+
+        return $this;
+    }
+
+    /**
+     * Gets manuals
+     *
+     * @return \OpenAPI\Client\Model\OfferManualDTO[]|null
+     */
+    public function getManuals()
+    {
+        return $this->container['manuals'];
+    }
+
+    /**
+     * Sets manuals
+     *
+     * @param \OpenAPI\Client\Model\OfferManualDTO[]|null $manuals Список инструкций по использованию товара.  Максимальное количество инструкций — 6.  Если вы передадите пустое поле `manuals`, загруженные ранее инструкции удалятся.
+     *
+     * @return self
+     */
+    public function setManuals($manuals)
+    {
+        if (is_null($manuals)) {
+            throw new \InvalidArgumentException('non-nullable manuals cannot be null');
+        }
+
+        if ((count($manuals) > 6)) {
+            throw new \InvalidArgumentException('invalid value for $manuals when calling UpdateOfferDTO., number of items must be less than or equal to 6.');
+        }
+        $this->container['manuals'] = $manuals;
 
         return $this;
     }

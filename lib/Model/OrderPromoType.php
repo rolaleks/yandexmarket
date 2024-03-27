@@ -33,7 +33,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * OrderPromoType Class Doc Comment
  *
  * @category Class
- * @description Тип скидки:  * &#x60;MARKET_COUPON&#x60; — скидка по промокоду от Маркета. * &#x60;MARKET_DEAL&#x60; — скидка в рамках соглашения на оказание услуг по продвижению сервиса между маркетплейсом Яндекс Маркета и партнером. * &#x60;MARKET_COIN&#x60; — скидка по купонам.
+ * @description Тип скидки:  * &#x60;DIRECT_DISCOUNT&#x60; — прямая скидка, которую устанавливает продавец или Маркет. * &#x60;BLUE_FLASH&#x60; — флеш-акция. * &#x60;MARKET_COUPON&#x60; — скидка по промокоду от Маркета. * &#x60;MARKET_PROMOCODE&#x60; — скидка по промокоду магазина. * &#x60;MARKET_DEAL&#x60; — скидка в рамках соглашения на оказание услуг по продвижению сервиса между Маркетом и партнером. * &#x60;MARKET_COIN&#x60; — скидка по купонам. * &#x60;CHEAPEST_AS_GIFT&#x60; — самый дешевый товар в подарок. * &#x60;DCO_EXTRA_DISCOUNT&#x60; — дополнительная скидка, необходимая для расчета субсидии от Маркета.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -101,7 +101,11 @@ class OrderPromoType
 
     public const PERCENT_DISCOUNT = 'PERCENT_DISCOUNT';
 
+    public const DCO_EXTRA_DISCOUNT = 'DCO_EXTRA_DISCOUNT';
+
     public const EMPTY_PROMO = 'EMPTY_PROMO';
+
+    public const BLOCKING_PROMO = 'BLOCKING_PROMO';
 
     public const UNKNOWN = 'UNKNOWN';
 
@@ -141,7 +145,9 @@ class OrderPromoType
             self::ANNOUNCEMENT_PROMO,
             self::DISCOUNT_BY_PAYMENT_TYPE,
             self::PERCENT_DISCOUNT,
+            self::DCO_EXTRA_DISCOUNT,
             self::EMPTY_PROMO,
+            self::BLOCKING_PROMO,
             self::UNKNOWN
         ];
     }

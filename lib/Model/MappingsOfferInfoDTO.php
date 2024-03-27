@@ -478,8 +478,8 @@ class MappingsOfferInfoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 150)) {
-            $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 150.";
+        if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 256)) {
+            $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 256.";
         }
 
         if (!is_null($this->container['shop_sku']) && (mb_strlen($this->container['shop_sku']) > 80)) {
@@ -538,7 +538,7 @@ class MappingsOfferInfoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets name
      *
-     * @param string|null $name Составляйте название по схеме: тип + бренд или производитель + модель + особенности, если есть (например, цвет, размер или вес) и количество в упаковке.  Не включайте в название условия продажи (например, «скидка», «бесплатная доставка» и т. д.), эмоциональные характеристики («хит», «супер» и т. д.). Не пишите слова большими буквами — кроме устоявшихся названий брендов и моделей.  Оптимальная длина — 50–60 символов, максимальная — 150.  [Рекомендации и правила](https://yandex.ru/support/marketplace/assortment/fields/title.html)
+     * @param string|null $name Составляйте название по схеме: тип + бренд или производитель + модель + особенности, если есть (например, цвет, размер или вес) и количество в упаковке.  Не включайте в название условия продажи (например, «скидка», «бесплатная доставка» и т. д.), эмоциональные характеристики («хит», «супер» и т. д.). Не пишите слова большими буквами — кроме устоявшихся названий брендов и моделей.  Оптимальная длина — 50–60 символов, максимальная — 256.  [Рекомендации и правила](https://yandex.ru/support/marketplace/assortment/fields/title.html)
      *
      * @return self
      */
@@ -547,8 +547,8 @@ class MappingsOfferInfoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
         }
-        if ((mb_strlen($name) > 150)) {
-            throw new \InvalidArgumentException('invalid length for $name when calling MappingsOfferInfoDTO., must be smaller than or equal to 150.');
+        if ((mb_strlen($name) > 256)) {
+            throw new \InvalidArgumentException('invalid length for $name when calling MappingsOfferInfoDTO., must be smaller than or equal to 256.');
         }
 
         $this->container['name'] = $name;
@@ -569,7 +569,7 @@ class MappingsOfferInfoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets shop_sku
      *
-     * @param string|null $shop_sku **Ваш SKU**  Идентификатор товара в магазине. Разрешены английские и русские буквы, цифры и символы `. , / \\ ( ) [ ] - = _`  Максимальная длина — 80 знаков.  [Что такое SKU и как его назначать](https://yandex.ru/support/marketplace/assortment/add/index.html#fields).
+     * @param string|null $shop_sku Ваш SKU — идентификатор товара в вашей системе.  Разрешена любая последовательность длиной до 80 знаков. В нее могут входить английские и русские буквы, цифры и символы `. , / \\ ( ) [ ] - = _`  Правила использования SKU:  * У каждого товара SKU должен быть свой.  * SKU товара нельзя менять — можно только удалить товар и добавить заново с новым SKU.  * Уже заданный SKU нельзя освободить и использовать заново для другого товара. Каждый товар должен получать новый идентификатор, до того никогда не использовавшийся в вашем каталоге.  [Что такое SKU и как его назначать](https://yandex.ru/support/marketplace/assortment/add/index.html#fields)
      *
      * @return self
      */
@@ -718,7 +718,7 @@ class MappingsOfferInfoDTO implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets id
      *
-     * @param string|null $id **Ваш SKU**  Идентификатор товара в магазине. Разрешены английские и русские буквы, цифры и символы `. , / \\ ( ) [ ] - = _`  Максимальная длина — 80 знаков.  [Что такое SKU и как его назначать](https://yandex.ru/support/marketplace/assortment/add/index.html#fields).
+     * @param string|null $id Ваш SKU — идентификатор товара в вашей системе.  Разрешена любая последовательность длиной до 80 знаков. В нее могут входить английские и русские буквы, цифры и символы `. , / \\ ( ) [ ] - = _`  Правила использования SKU:  * У каждого товара SKU должен быть свой.  * SKU товара нельзя менять — можно только удалить товар и добавить заново с новым SKU.  * Уже заданный SKU нельзя освободить и использовать заново для другого товара. Каждый товар должен получать новый идентификатор, до того никогда не использовавшийся в вашем каталоге.  [Что такое SKU и как его назначать](https://yandex.ru/support/marketplace/assortment/add/index.html#fields)
      *
      * @return self
      */
