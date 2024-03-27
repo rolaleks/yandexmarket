@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * OrderTrackDTOTest Class Doc Comment
  *
  * @category    Class
- * @description Информация о трек-номерах.
+ * @description Информация о трек-номере посылки (DBS).
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

@@ -1869,12 +1869,12 @@ class ReturnsApi
      * @param  string $page_token Идентификатор страницы c результатами.  Если параметр не указан, возвращается самая старая страница.  Рекомендуется передавать значение выходного параметра &#x60;nextPageToken&#x60;, полученное при последнем запросе.  Если задан &#x60;page_token&#x60;, параметры &#x60;offset&#x60;, &#x60;page_number&#x60; и &#x60;page_size&#x60; игнорируются. (optional)
      * @param  int $limit Количество товаров на одной странице. (optional)
      * @param  int[] $order_ids Идентификаторы заказов — для фильтрации результатов.  Несколько идентификаторов перечисляются через запятую без пробела. (optional)
-     * @param  \OpenAPI\Client\Model\RefundStatusType[] $statuses Статусы возвратов или невыкупов — для фильтрации результатов.  Возможные значения:  * CREATED — возврат создан.  * RECEIVED — принят у покупателя.  * IN_TRANSIT — возврат в пути.  * READY_FOR_PICKUP — возврат готов к выдаче магазину.  * PICKED — возврат выдан магазину.  * LOST — возврат утерян при транспортировке.  * CANCELLED — возврат отменен.  * EXPIRED — возврат просрочен, покупатель не передал товар.  * FULFILMENT_RECEIVED — возврат принят на складе Маркета.  * PREPARED_FOR_UTILIZATION — возврат передан в утилизацию.  * UTILIZED — возврат утилизирован.  Несколько статусов перечисляются через запятую. (optional)
-     * @param  ReturnType $type Тип заказа для фильтрации:  * RETURN — возврат.  * UNREDEEMED — невыкуп.  Если не указывать, в ответе будут и возвраты, и невыкупы. (optional)
-     * @param  \DateTime $from_date Начальные дата и время для фильтрации возвратов или невыкупов по дате оформления.  Формат: ГГГГ-ММ-ДД. (optional)
-     * @param  \DateTime $to_date Конечные дата и время для фильтрации возвратов или невыкупов по дате оформления.  Формат: ГГГГ-ММ-ДД. (optional)
-     * @param  \DateTime $from_date2 Дата, с которой интересуют возвраты (устаревшее, будет удалено) (optional) (deprecated)
-     * @param  \DateTime $to_date2 Дата, до которой интересуют возвраты (устаревшее, будет удалено) (optional) (deprecated)
+     * @param  \OpenAPI\Client\Model\RefundStatusType[] $statuses Статусы возвратов или невыкупов — для фильтрации результатов.  Несколько статусов перечисляются через запятую. (optional)
+     * @param  ReturnType $type Тип заказа для фильтрации:  * &#x60;RETURN&#x60; — возврат.  * &#x60;UNREDEEMED&#x60; — невыкуп.  Если не указывать, в ответе будут и возвраты, и невыкупы. (optional)
+     * @param  \DateTime $from_date Начальные дата и время для фильтрации возвратов или невыкупов по дате оформления.  Формат: &#x60;ГГГГ-ММ-ДД&#x60;. (optional)
+     * @param  \DateTime $to_date Конечные дата и время для фильтрации возвратов или невыкупов по дате оформления.  Формат: &#x60;ГГГГ-ММ-ДД&#x60;. (optional)
+     * @param  \DateTime $from_date2 Дата, с которой интересуют возвраты (устаревшее, будет удалено). (optional) (deprecated)
+     * @param  \DateTime $to_date2 Дата, до которой интересуют возвраты (устаревшее, будет удалено). (optional) (deprecated)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getReturns'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
@@ -1896,12 +1896,12 @@ class ReturnsApi
      * @param  string $page_token Идентификатор страницы c результатами.  Если параметр не указан, возвращается самая старая страница.  Рекомендуется передавать значение выходного параметра &#x60;nextPageToken&#x60;, полученное при последнем запросе.  Если задан &#x60;page_token&#x60;, параметры &#x60;offset&#x60;, &#x60;page_number&#x60; и &#x60;page_size&#x60; игнорируются. (optional)
      * @param  int $limit Количество товаров на одной странице. (optional)
      * @param  int[] $order_ids Идентификаторы заказов — для фильтрации результатов.  Несколько идентификаторов перечисляются через запятую без пробела. (optional)
-     * @param  \OpenAPI\Client\Model\RefundStatusType[] $statuses Статусы возвратов или невыкупов — для фильтрации результатов.  Возможные значения:  * CREATED — возврат создан.  * RECEIVED — принят у покупателя.  * IN_TRANSIT — возврат в пути.  * READY_FOR_PICKUP — возврат готов к выдаче магазину.  * PICKED — возврат выдан магазину.  * LOST — возврат утерян при транспортировке.  * CANCELLED — возврат отменен.  * EXPIRED — возврат просрочен, покупатель не передал товар.  * FULFILMENT_RECEIVED — возврат принят на складе Маркета.  * PREPARED_FOR_UTILIZATION — возврат передан в утилизацию.  * UTILIZED — возврат утилизирован.  Несколько статусов перечисляются через запятую. (optional)
-     * @param  ReturnType $type Тип заказа для фильтрации:  * RETURN — возврат.  * UNREDEEMED — невыкуп.  Если не указывать, в ответе будут и возвраты, и невыкупы. (optional)
-     * @param  \DateTime $from_date Начальные дата и время для фильтрации возвратов или невыкупов по дате оформления.  Формат: ГГГГ-ММ-ДД. (optional)
-     * @param  \DateTime $to_date Конечные дата и время для фильтрации возвратов или невыкупов по дате оформления.  Формат: ГГГГ-ММ-ДД. (optional)
-     * @param  \DateTime $from_date2 Дата, с которой интересуют возвраты (устаревшее, будет удалено) (optional) (deprecated)
-     * @param  \DateTime $to_date2 Дата, до которой интересуют возвраты (устаревшее, будет удалено) (optional) (deprecated)
+     * @param  \OpenAPI\Client\Model\RefundStatusType[] $statuses Статусы возвратов или невыкупов — для фильтрации результатов.  Несколько статусов перечисляются через запятую. (optional)
+     * @param  ReturnType $type Тип заказа для фильтрации:  * &#x60;RETURN&#x60; — возврат.  * &#x60;UNREDEEMED&#x60; — невыкуп.  Если не указывать, в ответе будут и возвраты, и невыкупы. (optional)
+     * @param  \DateTime $from_date Начальные дата и время для фильтрации возвратов или невыкупов по дате оформления.  Формат: &#x60;ГГГГ-ММ-ДД&#x60;. (optional)
+     * @param  \DateTime $to_date Конечные дата и время для фильтрации возвратов или невыкупов по дате оформления.  Формат: &#x60;ГГГГ-ММ-ДД&#x60;. (optional)
+     * @param  \DateTime $from_date2 Дата, с которой интересуют возвраты (устаревшее, будет удалено). (optional) (deprecated)
+     * @param  \DateTime $to_date2 Дата, до которой интересуют возвраты (устаревшее, будет удалено). (optional) (deprecated)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getReturns'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
@@ -2239,12 +2239,12 @@ class ReturnsApi
      * @param  string $page_token Идентификатор страницы c результатами.  Если параметр не указан, возвращается самая старая страница.  Рекомендуется передавать значение выходного параметра &#x60;nextPageToken&#x60;, полученное при последнем запросе.  Если задан &#x60;page_token&#x60;, параметры &#x60;offset&#x60;, &#x60;page_number&#x60; и &#x60;page_size&#x60; игнорируются. (optional)
      * @param  int $limit Количество товаров на одной странице. (optional)
      * @param  int[] $order_ids Идентификаторы заказов — для фильтрации результатов.  Несколько идентификаторов перечисляются через запятую без пробела. (optional)
-     * @param  \OpenAPI\Client\Model\RefundStatusType[] $statuses Статусы возвратов или невыкупов — для фильтрации результатов.  Возможные значения:  * CREATED — возврат создан.  * RECEIVED — принят у покупателя.  * IN_TRANSIT — возврат в пути.  * READY_FOR_PICKUP — возврат готов к выдаче магазину.  * PICKED — возврат выдан магазину.  * LOST — возврат утерян при транспортировке.  * CANCELLED — возврат отменен.  * EXPIRED — возврат просрочен, покупатель не передал товар.  * FULFILMENT_RECEIVED — возврат принят на складе Маркета.  * PREPARED_FOR_UTILIZATION — возврат передан в утилизацию.  * UTILIZED — возврат утилизирован.  Несколько статусов перечисляются через запятую. (optional)
-     * @param  ReturnType $type Тип заказа для фильтрации:  * RETURN — возврат.  * UNREDEEMED — невыкуп.  Если не указывать, в ответе будут и возвраты, и невыкупы. (optional)
-     * @param  \DateTime $from_date Начальные дата и время для фильтрации возвратов или невыкупов по дате оформления.  Формат: ГГГГ-ММ-ДД. (optional)
-     * @param  \DateTime $to_date Конечные дата и время для фильтрации возвратов или невыкупов по дате оформления.  Формат: ГГГГ-ММ-ДД. (optional)
-     * @param  \DateTime $from_date2 Дата, с которой интересуют возвраты (устаревшее, будет удалено) (optional) (deprecated)
-     * @param  \DateTime $to_date2 Дата, до которой интересуют возвраты (устаревшее, будет удалено) (optional) (deprecated)
+     * @param  \OpenAPI\Client\Model\RefundStatusType[] $statuses Статусы возвратов или невыкупов — для фильтрации результатов.  Несколько статусов перечисляются через запятую. (optional)
+     * @param  ReturnType $type Тип заказа для фильтрации:  * &#x60;RETURN&#x60; — возврат.  * &#x60;UNREDEEMED&#x60; — невыкуп.  Если не указывать, в ответе будут и возвраты, и невыкупы. (optional)
+     * @param  \DateTime $from_date Начальные дата и время для фильтрации возвратов или невыкупов по дате оформления.  Формат: &#x60;ГГГГ-ММ-ДД&#x60;. (optional)
+     * @param  \DateTime $to_date Конечные дата и время для фильтрации возвратов или невыкупов по дате оформления.  Формат: &#x60;ГГГГ-ММ-ДД&#x60;. (optional)
+     * @param  \DateTime $from_date2 Дата, с которой интересуют возвраты (устаревшее, будет удалено). (optional) (deprecated)
+     * @param  \DateTime $to_date2 Дата, до которой интересуют возвраты (устаревшее, будет удалено). (optional) (deprecated)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getReturns'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2269,12 +2269,12 @@ class ReturnsApi
      * @param  string $page_token Идентификатор страницы c результатами.  Если параметр не указан, возвращается самая старая страница.  Рекомендуется передавать значение выходного параметра &#x60;nextPageToken&#x60;, полученное при последнем запросе.  Если задан &#x60;page_token&#x60;, параметры &#x60;offset&#x60;, &#x60;page_number&#x60; и &#x60;page_size&#x60; игнорируются. (optional)
      * @param  int $limit Количество товаров на одной странице. (optional)
      * @param  int[] $order_ids Идентификаторы заказов — для фильтрации результатов.  Несколько идентификаторов перечисляются через запятую без пробела. (optional)
-     * @param  \OpenAPI\Client\Model\RefundStatusType[] $statuses Статусы возвратов или невыкупов — для фильтрации результатов.  Возможные значения:  * CREATED — возврат создан.  * RECEIVED — принят у покупателя.  * IN_TRANSIT — возврат в пути.  * READY_FOR_PICKUP — возврат готов к выдаче магазину.  * PICKED — возврат выдан магазину.  * LOST — возврат утерян при транспортировке.  * CANCELLED — возврат отменен.  * EXPIRED — возврат просрочен, покупатель не передал товар.  * FULFILMENT_RECEIVED — возврат принят на складе Маркета.  * PREPARED_FOR_UTILIZATION — возврат передан в утилизацию.  * UTILIZED — возврат утилизирован.  Несколько статусов перечисляются через запятую. (optional)
-     * @param  ReturnType $type Тип заказа для фильтрации:  * RETURN — возврат.  * UNREDEEMED — невыкуп.  Если не указывать, в ответе будут и возвраты, и невыкупы. (optional)
-     * @param  \DateTime $from_date Начальные дата и время для фильтрации возвратов или невыкупов по дате оформления.  Формат: ГГГГ-ММ-ДД. (optional)
-     * @param  \DateTime $to_date Конечные дата и время для фильтрации возвратов или невыкупов по дате оформления.  Формат: ГГГГ-ММ-ДД. (optional)
-     * @param  \DateTime $from_date2 Дата, с которой интересуют возвраты (устаревшее, будет удалено) (optional) (deprecated)
-     * @param  \DateTime $to_date2 Дата, до которой интересуют возвраты (устаревшее, будет удалено) (optional) (deprecated)
+     * @param  \OpenAPI\Client\Model\RefundStatusType[] $statuses Статусы возвратов или невыкупов — для фильтрации результатов.  Несколько статусов перечисляются через запятую. (optional)
+     * @param  ReturnType $type Тип заказа для фильтрации:  * &#x60;RETURN&#x60; — возврат.  * &#x60;UNREDEEMED&#x60; — невыкуп.  Если не указывать, в ответе будут и возвраты, и невыкупы. (optional)
+     * @param  \DateTime $from_date Начальные дата и время для фильтрации возвратов или невыкупов по дате оформления.  Формат: &#x60;ГГГГ-ММ-ДД&#x60;. (optional)
+     * @param  \DateTime $to_date Конечные дата и время для фильтрации возвратов или невыкупов по дате оформления.  Формат: &#x60;ГГГГ-ММ-ДД&#x60;. (optional)
+     * @param  \DateTime $from_date2 Дата, с которой интересуют возвраты (устаревшее, будет удалено). (optional) (deprecated)
+     * @param  \DateTime $to_date2 Дата, до которой интересуют возвраты (устаревшее, будет удалено). (optional) (deprecated)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getReturns'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2328,12 +2328,12 @@ class ReturnsApi
      * @param  string $page_token Идентификатор страницы c результатами.  Если параметр не указан, возвращается самая старая страница.  Рекомендуется передавать значение выходного параметра &#x60;nextPageToken&#x60;, полученное при последнем запросе.  Если задан &#x60;page_token&#x60;, параметры &#x60;offset&#x60;, &#x60;page_number&#x60; и &#x60;page_size&#x60; игнорируются. (optional)
      * @param  int $limit Количество товаров на одной странице. (optional)
      * @param  int[] $order_ids Идентификаторы заказов — для фильтрации результатов.  Несколько идентификаторов перечисляются через запятую без пробела. (optional)
-     * @param  \OpenAPI\Client\Model\RefundStatusType[] $statuses Статусы возвратов или невыкупов — для фильтрации результатов.  Возможные значения:  * CREATED — возврат создан.  * RECEIVED — принят у покупателя.  * IN_TRANSIT — возврат в пути.  * READY_FOR_PICKUP — возврат готов к выдаче магазину.  * PICKED — возврат выдан магазину.  * LOST — возврат утерян при транспортировке.  * CANCELLED — возврат отменен.  * EXPIRED — возврат просрочен, покупатель не передал товар.  * FULFILMENT_RECEIVED — возврат принят на складе Маркета.  * PREPARED_FOR_UTILIZATION — возврат передан в утилизацию.  * UTILIZED — возврат утилизирован.  Несколько статусов перечисляются через запятую. (optional)
-     * @param  ReturnType $type Тип заказа для фильтрации:  * RETURN — возврат.  * UNREDEEMED — невыкуп.  Если не указывать, в ответе будут и возвраты, и невыкупы. (optional)
-     * @param  \DateTime $from_date Начальные дата и время для фильтрации возвратов или невыкупов по дате оформления.  Формат: ГГГГ-ММ-ДД. (optional)
-     * @param  \DateTime $to_date Конечные дата и время для фильтрации возвратов или невыкупов по дате оформления.  Формат: ГГГГ-ММ-ДД. (optional)
-     * @param  \DateTime $from_date2 Дата, с которой интересуют возвраты (устаревшее, будет удалено) (optional) (deprecated)
-     * @param  \DateTime $to_date2 Дата, до которой интересуют возвраты (устаревшее, будет удалено) (optional) (deprecated)
+     * @param  \OpenAPI\Client\Model\RefundStatusType[] $statuses Статусы возвратов или невыкупов — для фильтрации результатов.  Несколько статусов перечисляются через запятую. (optional)
+     * @param  ReturnType $type Тип заказа для фильтрации:  * &#x60;RETURN&#x60; — возврат.  * &#x60;UNREDEEMED&#x60; — невыкуп.  Если не указывать, в ответе будут и возвраты, и невыкупы. (optional)
+     * @param  \DateTime $from_date Начальные дата и время для фильтрации возвратов или невыкупов по дате оформления.  Формат: &#x60;ГГГГ-ММ-ДД&#x60;. (optional)
+     * @param  \DateTime $to_date Конечные дата и время для фильтрации возвратов или невыкупов по дате оформления.  Формат: &#x60;ГГГГ-ММ-ДД&#x60;. (optional)
+     * @param  \DateTime $from_date2 Дата, с которой интересуют возвраты (устаревшее, будет удалено). (optional) (deprecated)
+     * @param  \DateTime $to_date2 Дата, до которой интересуют возвраты (устаревшее, будет удалено). (optional) (deprecated)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getReturns'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * BusinessDTOTest Class Doc Comment
  *
  * @category    Class
- * @description Информацию о кабинете.
+ * @description Информация о кабинете.
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

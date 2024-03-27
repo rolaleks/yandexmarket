@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * OrderBuyerDTOTest Class Doc Comment
  *
  * @category    Class
- * @description Информация о покупателе.
+ * @description Информация о покупателе.  Параметры &#x60;id&#x60;, &#x60;lastName&#x60;, &#x60;firstName&#x60; и &#x60;middleName&#x60; возвращаются, только если вы работаете по модели DBS.
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
@@ -110,24 +110,6 @@ class OrderBuyerDTOTest extends TestCase
      * Test attribute "middle_name"
      */
     public function testPropertyMiddleName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "phone"
-     */
-    public function testPropertyPhone()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "email"
-     */
-    public function testPropertyEmail()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

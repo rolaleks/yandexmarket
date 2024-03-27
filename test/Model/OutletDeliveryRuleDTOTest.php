@@ -80,15 +80,6 @@ class OutletDeliveryRuleDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "cost"
-     */
-    public function testPropertyCost()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "min_delivery_days"
      */
     public function testPropertyMinDeliveryDays()

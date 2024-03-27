@@ -131,12 +131,12 @@ class OrderLabelsApi
     /**
      * Operation generateOrderLabel
      *
-     * Ярлык‑наклейка на отдельное грузовое место в заказе
+     * Ярлык‑наклейка для коробки в заказе
      *
      * @param  int $campaign_id Идентификатор кампании в API и магазина в кабинете. Каждая кампания в API соответствует магазину в кабинете.  Чтобы узнать идентификаторы своих магазинов, воспользуйтесь запросом [GET campaigns](../../reference/campaigns/getCampaigns.md).  ℹ️ [Что такое кабинет и магазин на Маркете](https://yandex.ru/support/marketplace/account/introduction.html) (required)
      * @param  int $order_id Идентификатор заказа. (required)
-     * @param  int $shipment_id Идентификатор грузоместа (required)
-     * @param  int $box_id Идентификатор коробки (required)
+     * @param  int $shipment_id Идентификатор грузоместа. (required)
+     * @param  int $box_id Идентификатор коробки. (required)
      * @param  PageFormatType $format Настройка размещения ярлыков на странице. Если параметра нет, возвращается PDF с ярлыками формата A6. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generateOrderLabel'] to see the possible values for this operation
      *
@@ -153,12 +153,12 @@ class OrderLabelsApi
     /**
      * Operation generateOrderLabelWithHttpInfo
      *
-     * Ярлык‑наклейка на отдельное грузовое место в заказе
+     * Ярлык‑наклейка для коробки в заказе
      *
      * @param  int $campaign_id Идентификатор кампании в API и магазина в кабинете. Каждая кампания в API соответствует магазину в кабинете.  Чтобы узнать идентификаторы своих магазинов, воспользуйтесь запросом [GET campaigns](../../reference/campaigns/getCampaigns.md).  ℹ️ [Что такое кабинет и магазин на Маркете](https://yandex.ru/support/marketplace/account/introduction.html) (required)
      * @param  int $order_id Идентификатор заказа. (required)
-     * @param  int $shipment_id Идентификатор грузоместа (required)
-     * @param  int $box_id Идентификатор коробки (required)
+     * @param  int $shipment_id Идентификатор грузоместа. (required)
+     * @param  int $box_id Идентификатор коробки. (required)
      * @param  PageFormatType $format Настройка размещения ярлыков на странице. Если параметра нет, возвращается PDF с ярлыками формата A6. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generateOrderLabel'] to see the possible values for this operation
      *
@@ -491,12 +491,12 @@ class OrderLabelsApi
     /**
      * Operation generateOrderLabelAsync
      *
-     * Ярлык‑наклейка на отдельное грузовое место в заказе
+     * Ярлык‑наклейка для коробки в заказе
      *
      * @param  int $campaign_id Идентификатор кампании в API и магазина в кабинете. Каждая кампания в API соответствует магазину в кабинете.  Чтобы узнать идентификаторы своих магазинов, воспользуйтесь запросом [GET campaigns](../../reference/campaigns/getCampaigns.md).  ℹ️ [Что такое кабинет и магазин на Маркете](https://yandex.ru/support/marketplace/account/introduction.html) (required)
      * @param  int $order_id Идентификатор заказа. (required)
-     * @param  int $shipment_id Идентификатор грузоместа (required)
-     * @param  int $box_id Идентификатор коробки (required)
+     * @param  int $shipment_id Идентификатор грузоместа. (required)
+     * @param  int $box_id Идентификатор коробки. (required)
      * @param  PageFormatType $format Настройка размещения ярлыков на странице. Если параметра нет, возвращается PDF с ярлыками формата A6. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generateOrderLabel'] to see the possible values for this operation
      *
@@ -516,12 +516,12 @@ class OrderLabelsApi
     /**
      * Operation generateOrderLabelAsyncWithHttpInfo
      *
-     * Ярлык‑наклейка на отдельное грузовое место в заказе
+     * Ярлык‑наклейка для коробки в заказе
      *
      * @param  int $campaign_id Идентификатор кампании в API и магазина в кабинете. Каждая кампания в API соответствует магазину в кабинете.  Чтобы узнать идентификаторы своих магазинов, воспользуйтесь запросом [GET campaigns](../../reference/campaigns/getCampaigns.md).  ℹ️ [Что такое кабинет и магазин на Маркете](https://yandex.ru/support/marketplace/account/introduction.html) (required)
      * @param  int $order_id Идентификатор заказа. (required)
-     * @param  int $shipment_id Идентификатор грузоместа (required)
-     * @param  int $box_id Идентификатор коробки (required)
+     * @param  int $shipment_id Идентификатор грузоместа. (required)
+     * @param  int $box_id Идентификатор коробки. (required)
      * @param  PageFormatType $format Настройка размещения ярлыков на странице. Если параметра нет, возвращается PDF с ярлыками формата A6. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generateOrderLabel'] to see the possible values for this operation
      *
@@ -574,8 +574,8 @@ class OrderLabelsApi
      *
      * @param  int $campaign_id Идентификатор кампании в API и магазина в кабинете. Каждая кампания в API соответствует магазину в кабинете.  Чтобы узнать идентификаторы своих магазинов, воспользуйтесь запросом [GET campaigns](../../reference/campaigns/getCampaigns.md).  ℹ️ [Что такое кабинет и магазин на Маркете](https://yandex.ru/support/marketplace/account/introduction.html) (required)
      * @param  int $order_id Идентификатор заказа. (required)
-     * @param  int $shipment_id Идентификатор грузоместа (required)
-     * @param  int $box_id Идентификатор коробки (required)
+     * @param  int $shipment_id Идентификатор грузоместа. (required)
+     * @param  int $box_id Идентификатор коробки. (required)
      * @param  PageFormatType $format Настройка размещения ярлыков на странице. Если параметра нет, возвращается PDF с ярлыками формата A6. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['generateOrderLabel'] to see the possible values for this operation
      *

@@ -105,4 +105,22 @@ class WarehouseDTOTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "express"
+     */
+    public function testPropertyExpress()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "address"
+     */
+    public function testPropertyAddress()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

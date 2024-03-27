@@ -80,15 +80,6 @@ class GetHiddenOffersResultDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "total"
-     */
-    public function testPropertyTotal()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "paging"
      */
     public function testPropertyPaging()

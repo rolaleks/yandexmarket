@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * OrderItemInstanceDTOTest Class Doc Comment
  *
  * @category    Class
- * @description Переданные вами для данной позиции коды маркировки или УИНы. Коды \&quot;Честного знака\&quot; возвращаются в двух вариантах — с криптохвостом и без.
+ * @description Переданные вами для данной позиции коды маркировки или УИНы. Коды «Честного знака» возвращаются в двух вариантах — с криптохвостом и без.
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

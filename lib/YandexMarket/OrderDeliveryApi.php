@@ -137,7 +137,7 @@ class OrderDeliveryApi
     /**
      * Operation getOrderBuyerInfo
      *
-     * Информация о покупателе
+     * Информация о покупателе — физическом лице (DBS)
      *
      * @param  int $campaign_id Идентификатор кампании в API и магазина в кабинете. Каждая кампания в API соответствует магазину в кабинете.  Чтобы узнать идентификаторы своих магазинов, воспользуйтесь запросом [GET campaigns](../../reference/campaigns/getCampaigns.md).  ℹ️ [Что такое кабинет и магазин на Маркете](https://yandex.ru/support/marketplace/account/introduction.html) (required)
      * @param  int $order_id Идентификатор заказа. (required)
@@ -156,7 +156,7 @@ class OrderDeliveryApi
     /**
      * Operation getOrderBuyerInfoWithHttpInfo
      *
-     * Информация о покупателе
+     * Информация о покупателе — физическом лице (DBS)
      *
      * @param  int $campaign_id Идентификатор кампании в API и магазина в кабинете. Каждая кампания в API соответствует магазину в кабинете.  Чтобы узнать идентификаторы своих магазинов, воспользуйтесь запросом [GET campaigns](../../reference/campaigns/getCampaigns.md).  ℹ️ [Что такое кабинет и магазин на Маркете](https://yandex.ru/support/marketplace/account/introduction.html) (required)
      * @param  int $order_id Идентификатор заказа. (required)
@@ -491,7 +491,7 @@ class OrderDeliveryApi
     /**
      * Operation getOrderBuyerInfoAsync
      *
-     * Информация о покупателе
+     * Информация о покупателе — физическом лице (DBS)
      *
      * @param  int $campaign_id Идентификатор кампании в API и магазина в кабинете. Каждая кампания в API соответствует магазину в кабинете.  Чтобы узнать идентификаторы своих магазинов, воспользуйтесь запросом [GET campaigns](../../reference/campaigns/getCampaigns.md).  ℹ️ [Что такое кабинет и магазин на Маркете](https://yandex.ru/support/marketplace/account/introduction.html) (required)
      * @param  int $order_id Идентификатор заказа. (required)
@@ -513,7 +513,7 @@ class OrderDeliveryApi
     /**
      * Operation getOrderBuyerInfoAsyncWithHttpInfo
      *
-     * Информация о покупателе
+     * Информация о покупателе — физическом лице (DBS)
      *
      * @param  int $campaign_id Идентификатор кампании в API и магазина в кабинете. Каждая кампания в API соответствует магазину в кабинете.  Чтобы узнать идентификаторы своих магазинов, воспользуйтесь запросом [GET campaigns](../../reference/campaigns/getCampaigns.md).  ℹ️ [Что такое кабинет и магазин на Маркете](https://yandex.ru/support/marketplace/account/introduction.html) (required)
      * @param  int $order_id Идентификатор заказа. (required)
@@ -1238,7 +1238,7 @@ class OrderDeliveryApi
     /**
      * Operation setOrderDeliveryTrackCode
      *
-     * Передача трек‑номера посылки
+     * Передача трек‑номера посылки (DBS)
      *
      * @param  int $campaign_id Идентификатор кампании в API и магазина в кабинете. Каждая кампания в API соответствует магазину в кабинете.  Чтобы узнать идентификаторы своих магазинов, воспользуйтесь запросом [GET campaigns](../../reference/campaigns/getCampaigns.md).  ℹ️ [Что такое кабинет и магазин на Маркете](https://yandex.ru/support/marketplace/account/introduction.html) (required)
      * @param  int $order_id Идентификатор заказа. (required)
@@ -1258,7 +1258,7 @@ class OrderDeliveryApi
     /**
      * Operation setOrderDeliveryTrackCodeWithHttpInfo
      *
-     * Передача трек‑номера посылки
+     * Передача трек‑номера посылки (DBS)
      *
      * @param  int $campaign_id Идентификатор кампании в API и магазина в кабинете. Каждая кампания в API соответствует магазину в кабинете.  Чтобы узнать идентификаторы своих магазинов, воспользуйтесь запросом [GET campaigns](../../reference/campaigns/getCampaigns.md).  ℹ️ [Что такое кабинет и магазин на Маркете](https://yandex.ru/support/marketplace/account/introduction.html) (required)
      * @param  int $order_id Идентификатор заказа. (required)
@@ -1594,7 +1594,7 @@ class OrderDeliveryApi
     /**
      * Operation setOrderDeliveryTrackCodeAsync
      *
-     * Передача трек‑номера посылки
+     * Передача трек‑номера посылки (DBS)
      *
      * @param  int $campaign_id Идентификатор кампании в API и магазина в кабинете. Каждая кампания в API соответствует магазину в кабинете.  Чтобы узнать идентификаторы своих магазинов, воспользуйтесь запросом [GET campaigns](../../reference/campaigns/getCampaigns.md).  ℹ️ [Что такое кабинет и магазин на Маркете](https://yandex.ru/support/marketplace/account/introduction.html) (required)
      * @param  int $order_id Идентификатор заказа. (required)
@@ -1617,7 +1617,7 @@ class OrderDeliveryApi
     /**
      * Operation setOrderDeliveryTrackCodeAsyncWithHttpInfo
      *
-     * Передача трек‑номера посылки
+     * Передача трек‑номера посылки (DBS)
      *
      * @param  int $campaign_id Идентификатор кампании в API и магазина в кабинете. Каждая кампания в API соответствует магазину в кабинете.  Чтобы узнать идентификаторы своих магазинов, воспользуйтесь запросом [GET campaigns](../../reference/campaigns/getCampaigns.md).  ℹ️ [Что такое кабинет и магазин на Маркете](https://yandex.ru/support/marketplace/account/introduction.html) (required)
      * @param  int $order_id Идентификатор заказа. (required)

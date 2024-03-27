@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * RegionDTOTest Class Doc Comment
  *
  * @category    Class
- * @description Информация о регионах.
+ * @description Регион доставки.
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

@@ -125,6 +125,15 @@ class GetOfferDTOTest extends TestCase
     }
 
     /**
+     * Test attribute "manuals"
+     */
+    public function testPropertyManuals()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "vendor"
      */
     public function testPropertyVendor()

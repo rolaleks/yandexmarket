@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * ReportFormatTypeTest Class Doc Comment
  *
  * @category    Class
- * @description Формат отчета:  - &#x60;FILE&#x60; — файл с электронной таблицей.
+ * @description Формат отчета:  * &#x60;FILE&#x60; — файл с электронной таблицей. * &#x60;CSV&#x60; — ZIP-архив с CSV-файлами на каждый лист отчета.
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

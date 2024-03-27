@@ -74,7 +74,7 @@ class OrderLabelsApiTest extends TestCase
     /**
      * Test case for generateOrderLabel
      *
-     * Ярлык‑наклейка на отдельное грузовое место в заказе.
+     * Ярлык‑наклейка для коробки в заказе.
      *
      */
     public function testGenerateOrderLabel()

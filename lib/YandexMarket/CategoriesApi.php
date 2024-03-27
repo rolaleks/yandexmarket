@@ -1,6 +1,6 @@
 <?php
 /**
- * DeliveryServicesApi
+ * CategoriesApi
  * PHP version 7.4
  *
  * @category Class
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace OpenAPI\Client\YandexMarket;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -40,14 +40,14 @@ use OpenAPI\Client\HeaderSelector;
 use OpenAPI\Client\ObjectSerializer;
 
 /**
- * DeliveryServicesApi Class Doc Comment
+ * CategoriesApi Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class DeliveryServicesApi
+class CategoriesApi
 {
     /**
      * @var ClientInterface
@@ -71,7 +71,7 @@ class DeliveryServicesApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
-        'getDeliveryServices' => [
+        'getCategoriesTree' => [
             'application/json',
         ],
     ];
@@ -123,36 +123,36 @@ class DeliveryServicesApi
     }
 
     /**
-     * Operation getDeliveryServices
+     * Operation getCategoriesTree
      *
-     * Справочник служб доставки
+     * Дерево категорий
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDeliveryServices'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCategoriesTree'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\GetDeliveryServicesResponse|\OpenAPI\Client\Model\ApiClientDataErrorResponse|\OpenAPI\Client\Model\ApiUnauthorizedErrorResponse|\OpenAPI\Client\Model\ApiForbiddenErrorResponse|\OpenAPI\Client\Model\ApiNotFoundErrorResponse|\OpenAPI\Client\Model\ApiLimitErrorResponse|\OpenAPI\Client\Model\ApiServerErrorResponse
+     * @return \OpenAPI\Client\Model\GetCategoriesResponse|\OpenAPI\Client\Model\ApiClientDataErrorResponse|\OpenAPI\Client\Model\ApiUnauthorizedErrorResponse|\OpenAPI\Client\Model\ApiForbiddenErrorResponse|\OpenAPI\Client\Model\ApiNotFoundErrorResponse|\OpenAPI\Client\Model\ApiLimitErrorResponse|\OpenAPI\Client\Model\ApiServerErrorResponse
      */
-    public function getDeliveryServices(string $contentType = self::contentTypes['getDeliveryServices'][0])
+    public function getCategoriesTree(string $contentType = self::contentTypes['getCategoriesTree'][0])
     {
-        list($response) = $this->getDeliveryServicesWithHttpInfo($contentType);
+        list($response) = $this->getCategoriesTreeWithHttpInfo($contentType);
         return $response;
     }
 
     /**
-     * Operation getDeliveryServicesWithHttpInfo
+     * Operation getCategoriesTreeWithHttpInfo
      *
-     * Справочник служб доставки
+     * Дерево категорий
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDeliveryServices'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCategoriesTree'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\GetDeliveryServicesResponse|\OpenAPI\Client\Model\ApiClientDataErrorResponse|\OpenAPI\Client\Model\ApiUnauthorizedErrorResponse|\OpenAPI\Client\Model\ApiForbiddenErrorResponse|\OpenAPI\Client\Model\ApiNotFoundErrorResponse|\OpenAPI\Client\Model\ApiLimitErrorResponse|\OpenAPI\Client\Model\ApiServerErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\GetCategoriesResponse|\OpenAPI\Client\Model\ApiClientDataErrorResponse|\OpenAPI\Client\Model\ApiUnauthorizedErrorResponse|\OpenAPI\Client\Model\ApiForbiddenErrorResponse|\OpenAPI\Client\Model\ApiNotFoundErrorResponse|\OpenAPI\Client\Model\ApiLimitErrorResponse|\OpenAPI\Client\Model\ApiServerErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getDeliveryServicesWithHttpInfo(string $contentType = self::contentTypes['getDeliveryServices'][0])
+    public function getCategoriesTreeWithHttpInfo(string $contentType = self::contentTypes['getCategoriesTree'][0])
     {
-        $request = $this->getDeliveryServicesRequest($contentType);
+        $request = $this->getCategoriesTreeRequest($contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -191,11 +191,11 @@ class DeliveryServicesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\GetDeliveryServicesResponse' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\GetCategoriesResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\GetDeliveryServicesResponse' !== 'string') {
+                        if ('\OpenAPI\Client\Model\GetCategoriesResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -213,7 +213,7 @@ class DeliveryServicesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\GetDeliveryServicesResponse', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\GetCategoriesResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -381,7 +381,7 @@ class DeliveryServicesApi
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\GetDeliveryServicesResponse';
+            $returnType = '\OpenAPI\Client\Model\GetCategoriesResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -414,7 +414,7 @@ class DeliveryServicesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GetDeliveryServicesResponse',
+                        '\OpenAPI\Client\Model\GetCategoriesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -473,18 +473,18 @@ class DeliveryServicesApi
     }
 
     /**
-     * Operation getDeliveryServicesAsync
+     * Operation getCategoriesTreeAsync
      *
-     * Справочник служб доставки
+     * Дерево категорий
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDeliveryServices'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCategoriesTree'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getDeliveryServicesAsync(string $contentType = self::contentTypes['getDeliveryServices'][0])
+    public function getCategoriesTreeAsync(string $contentType = self::contentTypes['getCategoriesTree'][0])
     {
-        return $this->getDeliveryServicesAsyncWithHttpInfo($contentType)
+        return $this->getCategoriesTreeAsyncWithHttpInfo($contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -493,19 +493,19 @@ class DeliveryServicesApi
     }
 
     /**
-     * Operation getDeliveryServicesAsyncWithHttpInfo
+     * Operation getCategoriesTreeAsyncWithHttpInfo
      *
-     * Справочник служб доставки
+     * Дерево категорий
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDeliveryServices'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCategoriesTree'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getDeliveryServicesAsyncWithHttpInfo(string $contentType = self::contentTypes['getDeliveryServices'][0])
+    public function getCategoriesTreeAsyncWithHttpInfo(string $contentType = self::contentTypes['getCategoriesTree'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\GetDeliveryServicesResponse';
-        $request = $this->getDeliveryServicesRequest($contentType);
+        $returnType = '\OpenAPI\Client\Model\GetCategoriesResponse';
+        $request = $this->getCategoriesTreeRequest($contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -544,18 +544,18 @@ class DeliveryServicesApi
     }
 
     /**
-     * Create request for operation 'getDeliveryServices'
+     * Create request for operation 'getCategoriesTree'
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDeliveryServices'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCategoriesTree'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getDeliveryServicesRequest(string $contentType = self::contentTypes['getDeliveryServices'][0])
+    public function getCategoriesTreeRequest(string $contentType = self::contentTypes['getCategoriesTree'][0])
     {
 
 
-        $resourcePath = '/delivery/services';
+        $resourcePath = '/categories/tree';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -616,7 +616,7 @@ class DeliveryServicesApi
         $operationHost = $this->config->getHost();
         $query = ObjectSerializer::buildQuery($queryParams);
         return new Request(
-            'GET',
+            'POST',
             $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody

@@ -80,54 +80,9 @@ class HiddenOfferDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "feed_id"
-     */
-    public function testPropertyFeedId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "offer_id"
      */
     public function testPropertyOfferId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "ttl_in_hours"
-     */
-    public function testPropertyTtlInHours()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "comment"
-     */
-    public function testPropertyComment()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "market_sku"
-     */
-    public function testPropertyMarketSku()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "priority"
-     */
-    public function testPropertyPriority()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

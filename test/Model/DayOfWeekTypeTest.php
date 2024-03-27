@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * DayOfWeekTypeTest Class Doc Comment
  *
  * @category    Class
- * @description День недели:  * MONDAY — понедельник; * TUESDAY — вторник; * WEDNESDAY — среда; * THURSDAY — четверг; * FRIDAY — пятница; * SATURDAY — суббота; * SUNDAY — воскресенье.
+ * @description День недели:  * &#x60;MONDAY&#x60; — понедельник. * &#x60;TUESDAY&#x60; — вторник. * &#x60;WEDNESDAY&#x60; — среда. * &#x60;THURSDAY&#x60; — четверг. * &#x60;FRIDAY&#x60; — пятница. * &#x60;SATURDAY&#x60; — суббота. * &#x60;SUNDAY&#x60; — воскресенье.
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

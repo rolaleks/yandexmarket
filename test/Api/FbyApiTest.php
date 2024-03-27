@@ -96,6 +96,18 @@ class FbyApiTest extends TestCase
     }
 
     /**
+     * Test case for calculateTariffs
+     *
+     * Калькулятор стоимости услуг.
+     *
+     */
+    public function testCalculateTariffs()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for confirmBusinessPrices
      *
      * Подтверждение цены товара, попавшего в карантин (основная цена).
@@ -114,6 +126,18 @@ class FbyApiTest extends TestCase
      *
      */
     public function testConfirmCampaignPrices()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for createChat
+     *
+     * Создание нового чата с покупателем.
+     *
+     */
+    public function testCreateChat()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -168,6 +192,18 @@ class FbyApiTest extends TestCase
     }
 
     /**
+     * Test case for generateBoostConsolidatedReport
+     *
+     * Отчет по бусту продаж.
+     *
+     */
+    public function testGenerateBoostConsolidatedReport()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for generateGoodsMovementReport
      *
      * Отчет по движению товаров.
@@ -186,6 +222,18 @@ class FbyApiTest extends TestCase
      *
      */
     public function testGenerateGoodsRealizationReport()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for generateGoodsTurnoverReport
+     *
+     * Отчет по оборачиваемости.
+     *
+     */
+    public function testGenerateGoodsTurnoverReport()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -252,12 +300,12 @@ class FbyApiTest extends TestCase
     }
 
     /**
-     * Test case for getActualStocks
+     * Test case for generateUnitedOrdersReport
      *
-     * Запрос информации об остатках.
+     * Отчет по заказам.
      *
      */
-    public function testGetActualStocks()
+    public function testGenerateUnitedOrdersReport()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -372,12 +420,48 @@ class FbyApiTest extends TestCase
     }
 
     /**
+     * Test case for getCategoriesTree
+     *
+     * Дерево категорий.
+     *
+     */
+    public function testGetCategoriesTree()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for getCategoryContentParameters
      *
      * Списки характеристик товаров по категориям.
      *
      */
     public function testGetCategoryContentParameters()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for getChatHistory
+     *
+     * Получение истории сообщений в чате.
+     *
+     */
+    public function testGetChatHistory()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for getChats
+     *
+     * Получение доступных чатов.
+     *
+     */
+    public function testGetChats()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -480,9 +564,33 @@ class FbyApiTest extends TestCase
     }
 
     /**
+     * Test case for getOrderBusinessBuyerInfo
+     *
+     * Информация о покупателе — юридическом лице.
+     *
+     */
+    public function testGetOrderBusinessBuyerInfo()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for getOrderBusinessDocumentsInfo
+     *
+     * Информация о документах.
+     *
+     */
+    public function testGetOrderBusinessDocumentsInfo()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for getOrdersStats
      *
-     * Отчет по заказам.
+     * Детальная информация по заказам.
      *
      */
     public function testGetOrdersStats()
@@ -618,6 +726,30 @@ class FbyApiTest extends TestCase
      *
      */
     public function testSearchRegionsByName()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for sendFileToChat
+     *
+     * Отправка файла в чат.
+     *
+     */
+    public function testSendFileToChat()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for sendMessageToChat
+     *
+     * Отправка сообщения в чат.
+     *
+     */
+    public function testSendMessageToChat()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

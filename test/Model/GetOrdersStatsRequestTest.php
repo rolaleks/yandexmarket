@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * GetOrdersStatsRequestTest Class Doc Comment
  *
  * @category    Class
- * @description Запрос отчета по заказам.
+ * @description Запрос информации по заказам.
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

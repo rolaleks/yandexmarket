@@ -74,7 +74,7 @@ class OrdersStatsApiTest extends TestCase
     /**
      * Test case for getOrdersStats
      *
-     * Отчет по заказам.
+     * Детальная информация по заказам.
      *
      */
     public function testGetOrdersStats()

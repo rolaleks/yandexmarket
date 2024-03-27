@@ -105,4 +105,22 @@ class GenerateStocksOnWarehousesReportRequestTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "category_ids"
+     */
+    public function testPropertyCategoryIds()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "has_stocks"
+     */
+    public function testPropertyHasStocks()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

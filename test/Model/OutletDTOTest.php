@@ -107,15 +107,6 @@ class OutletDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "is_main"
-     */
-    public function testPropertyIsMain()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "shop_outlet_code"
      */
     public function testPropertyShopOutletCode()
@@ -164,15 +155,6 @@ class OutletDTOTest extends TestCase
      * Test attribute "delivery_rules"
      */
     public function testPropertyDeliveryRules()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "emails"
-     */
-    public function testPropertyEmails()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

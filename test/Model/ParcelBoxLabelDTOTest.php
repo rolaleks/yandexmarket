@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * ParcelBoxLabelDTOTest Class Doc Comment
  *
  * @category    Class
- * @description Информация о ярлыке для грузового места.
+ * @description Информация о ярлыке для коробки.
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
@@ -128,6 +128,15 @@ class ParcelBoxLabelDTOTest extends TestCase
      * Test attribute "recipient_name"
      */
     public function testPropertyRecipientName()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "box_id"
+     */
+    public function testPropertyBoxId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

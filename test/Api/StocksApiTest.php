@@ -72,18 +72,6 @@ class StocksApiTest extends TestCase
     }
 
     /**
-     * Test case for getActualStocks
-     *
-     * Запрос информации об остатках.
-     *
-     */
-    public function testGetActualStocks()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for getStocks
      *
      * Информация об остатках и оборачиваемости.

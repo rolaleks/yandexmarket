@@ -1,6 +1,6 @@
 <?php
 /**
- * OrdersStatsApi
+ * TariffsApi
  * PHP version 7.4
  *
  * @category Class
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace OpenAPI\Client\YandexMarket;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -40,14 +40,14 @@ use OpenAPI\Client\HeaderSelector;
 use OpenAPI\Client\ObjectSerializer;
 
 /**
- * OrdersStatsApi Class Doc Comment
+ * TariffsApi Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class OrdersStatsApi
+class TariffsApi
 {
     /**
      * @var ClientInterface
@@ -71,7 +71,7 @@ class OrdersStatsApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
-        'getOrdersStats' => [
+        'calculateTariffs' => [
             'application/json',
         ],
     ];
@@ -123,44 +123,38 @@ class OrdersStatsApi
     }
 
     /**
-     * Operation getOrdersStats
+     * Operation calculateTariffs
      *
-     * Детальная информация по заказам
+     * Калькулятор стоимости услуг
      *
-     * @param  int $campaign_id Идентификатор кампании в API и магазина в кабинете. Каждая кампания в API соответствует магазину в кабинете.  Чтобы узнать идентификаторы своих магазинов, воспользуйтесь запросом [GET campaigns](../../reference/campaigns/getCampaigns.md).  ℹ️ [Что такое кабинет и магазин на Маркете](https://yandex.ru/support/marketplace/account/introduction.html) (required)
-     * @param  string $page_token Идентификатор страницы c результатами.  Если параметр не указан, возвращается самая старая страница.  Рекомендуется передавать значение выходного параметра &#x60;nextPageToken&#x60;, полученное при последнем запросе.  Если задан &#x60;page_token&#x60;, параметры &#x60;offset&#x60;, &#x60;page_number&#x60; и &#x60;page_size&#x60; игнорируются. (optional)
-     * @param  int $limit Количество товаров на одной странице. (optional)
-     * @param  \OpenAPI\Client\Model\GetOrdersStatsRequest $get_orders_stats_request get_orders_stats_request (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOrdersStats'] to see the possible values for this operation
+     * @param  \OpenAPI\Client\Model\CalculateTariffsRequest $calculate_tariffs_request calculate_tariffs_request (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['calculateTariffs'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\GetOrdersStatsResponse|\OpenAPI\Client\Model\ApiClientDataErrorResponse|\OpenAPI\Client\Model\ApiUnauthorizedErrorResponse|\OpenAPI\Client\Model\ApiForbiddenErrorResponse|\OpenAPI\Client\Model\ApiNotFoundErrorResponse|\OpenAPI\Client\Model\ApiLimitErrorResponse|\OpenAPI\Client\Model\ApiServerErrorResponse
+     * @return \OpenAPI\Client\Model\CalculateTariffsResponse|\OpenAPI\Client\Model\ApiClientDataErrorResponse|\OpenAPI\Client\Model\ApiUnauthorizedErrorResponse|\OpenAPI\Client\Model\ApiForbiddenErrorResponse|\OpenAPI\Client\Model\ApiNotFoundErrorResponse|\OpenAPI\Client\Model\ApiLimitErrorResponse|\OpenAPI\Client\Model\ApiServerErrorResponse
      */
-    public function getOrdersStats($campaign_id, $page_token = null, $limit = null, $get_orders_stats_request = null, string $contentType = self::contentTypes['getOrdersStats'][0])
+    public function calculateTariffs($calculate_tariffs_request, string $contentType = self::contentTypes['calculateTariffs'][0])
     {
-        list($response) = $this->getOrdersStatsWithHttpInfo($campaign_id, $page_token, $limit, $get_orders_stats_request, $contentType);
+        list($response) = $this->calculateTariffsWithHttpInfo($calculate_tariffs_request, $contentType);
         return $response;
     }
 
     /**
-     * Operation getOrdersStatsWithHttpInfo
+     * Operation calculateTariffsWithHttpInfo
      *
-     * Детальная информация по заказам
+     * Калькулятор стоимости услуг
      *
-     * @param  int $campaign_id Идентификатор кампании в API и магазина в кабинете. Каждая кампания в API соответствует магазину в кабинете.  Чтобы узнать идентификаторы своих магазинов, воспользуйтесь запросом [GET campaigns](../../reference/campaigns/getCampaigns.md).  ℹ️ [Что такое кабинет и магазин на Маркете](https://yandex.ru/support/marketplace/account/introduction.html) (required)
-     * @param  string $page_token Идентификатор страницы c результатами.  Если параметр не указан, возвращается самая старая страница.  Рекомендуется передавать значение выходного параметра &#x60;nextPageToken&#x60;, полученное при последнем запросе.  Если задан &#x60;page_token&#x60;, параметры &#x60;offset&#x60;, &#x60;page_number&#x60; и &#x60;page_size&#x60; игнорируются. (optional)
-     * @param  int $limit Количество товаров на одной странице. (optional)
-     * @param  \OpenAPI\Client\Model\GetOrdersStatsRequest $get_orders_stats_request (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOrdersStats'] to see the possible values for this operation
+     * @param  \OpenAPI\Client\Model\CalculateTariffsRequest $calculate_tariffs_request (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['calculateTariffs'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\GetOrdersStatsResponse|\OpenAPI\Client\Model\ApiClientDataErrorResponse|\OpenAPI\Client\Model\ApiUnauthorizedErrorResponse|\OpenAPI\Client\Model\ApiForbiddenErrorResponse|\OpenAPI\Client\Model\ApiNotFoundErrorResponse|\OpenAPI\Client\Model\ApiLimitErrorResponse|\OpenAPI\Client\Model\ApiServerErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\CalculateTariffsResponse|\OpenAPI\Client\Model\ApiClientDataErrorResponse|\OpenAPI\Client\Model\ApiUnauthorizedErrorResponse|\OpenAPI\Client\Model\ApiForbiddenErrorResponse|\OpenAPI\Client\Model\ApiNotFoundErrorResponse|\OpenAPI\Client\Model\ApiLimitErrorResponse|\OpenAPI\Client\Model\ApiServerErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOrdersStatsWithHttpInfo($campaign_id, $page_token = null, $limit = null, $get_orders_stats_request = null, string $contentType = self::contentTypes['getOrdersStats'][0])
+    public function calculateTariffsWithHttpInfo($calculate_tariffs_request, string $contentType = self::contentTypes['calculateTariffs'][0])
     {
-        $request = $this->getOrdersStatsRequest($campaign_id, $page_token, $limit, $get_orders_stats_request, $contentType);
+        $request = $this->calculateTariffsRequest($calculate_tariffs_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -199,11 +193,11 @@ class OrdersStatsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\GetOrdersStatsResponse' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\CalculateTariffsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\GetOrdersStatsResponse' !== 'string') {
+                        if ('\OpenAPI\Client\Model\CalculateTariffsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -221,7 +215,7 @@ class OrdersStatsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\GetOrdersStatsResponse', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CalculateTariffsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -389,7 +383,7 @@ class OrdersStatsApi
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\GetOrdersStatsResponse';
+            $returnType = '\OpenAPI\Client\Model\CalculateTariffsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -422,7 +416,7 @@ class OrdersStatsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GetOrdersStatsResponse',
+                        '\OpenAPI\Client\Model\CalculateTariffsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -481,22 +475,19 @@ class OrdersStatsApi
     }
 
     /**
-     * Operation getOrdersStatsAsync
+     * Operation calculateTariffsAsync
      *
-     * Детальная информация по заказам
+     * Калькулятор стоимости услуг
      *
-     * @param  int $campaign_id Идентификатор кампании в API и магазина в кабинете. Каждая кампания в API соответствует магазину в кабинете.  Чтобы узнать идентификаторы своих магазинов, воспользуйтесь запросом [GET campaigns](../../reference/campaigns/getCampaigns.md).  ℹ️ [Что такое кабинет и магазин на Маркете](https://yandex.ru/support/marketplace/account/introduction.html) (required)
-     * @param  string $page_token Идентификатор страницы c результатами.  Если параметр не указан, возвращается самая старая страница.  Рекомендуется передавать значение выходного параметра &#x60;nextPageToken&#x60;, полученное при последнем запросе.  Если задан &#x60;page_token&#x60;, параметры &#x60;offset&#x60;, &#x60;page_number&#x60; и &#x60;page_size&#x60; игнорируются. (optional)
-     * @param  int $limit Количество товаров на одной странице. (optional)
-     * @param  \OpenAPI\Client\Model\GetOrdersStatsRequest $get_orders_stats_request (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOrdersStats'] to see the possible values for this operation
+     * @param  \OpenAPI\Client\Model\CalculateTariffsRequest $calculate_tariffs_request (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['calculateTariffs'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrdersStatsAsync($campaign_id, $page_token = null, $limit = null, $get_orders_stats_request = null, string $contentType = self::contentTypes['getOrdersStats'][0])
+    public function calculateTariffsAsync($calculate_tariffs_request, string $contentType = self::contentTypes['calculateTariffs'][0])
     {
-        return $this->getOrdersStatsAsyncWithHttpInfo($campaign_id, $page_token, $limit, $get_orders_stats_request, $contentType)
+        return $this->calculateTariffsAsyncWithHttpInfo($calculate_tariffs_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -505,23 +496,20 @@ class OrdersStatsApi
     }
 
     /**
-     * Operation getOrdersStatsAsyncWithHttpInfo
+     * Operation calculateTariffsAsyncWithHttpInfo
      *
-     * Детальная информация по заказам
+     * Калькулятор стоимости услуг
      *
-     * @param  int $campaign_id Идентификатор кампании в API и магазина в кабинете. Каждая кампания в API соответствует магазину в кабинете.  Чтобы узнать идентификаторы своих магазинов, воспользуйтесь запросом [GET campaigns](../../reference/campaigns/getCampaigns.md).  ℹ️ [Что такое кабинет и магазин на Маркете](https://yandex.ru/support/marketplace/account/introduction.html) (required)
-     * @param  string $page_token Идентификатор страницы c результатами.  Если параметр не указан, возвращается самая старая страница.  Рекомендуется передавать значение выходного параметра &#x60;nextPageToken&#x60;, полученное при последнем запросе.  Если задан &#x60;page_token&#x60;, параметры &#x60;offset&#x60;, &#x60;page_number&#x60; и &#x60;page_size&#x60; игнорируются. (optional)
-     * @param  int $limit Количество товаров на одной странице. (optional)
-     * @param  \OpenAPI\Client\Model\GetOrdersStatsRequest $get_orders_stats_request (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOrdersStats'] to see the possible values for this operation
+     * @param  \OpenAPI\Client\Model\CalculateTariffsRequest $calculate_tariffs_request (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['calculateTariffs'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrdersStatsAsyncWithHttpInfo($campaign_id, $page_token = null, $limit = null, $get_orders_stats_request = null, string $contentType = self::contentTypes['getOrdersStats'][0])
+    public function calculateTariffsAsyncWithHttpInfo($calculate_tariffs_request, string $contentType = self::contentTypes['calculateTariffs'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\GetOrdersStatsResponse';
-        $request = $this->getOrdersStatsRequest($campaign_id, $page_token, $limit, $get_orders_stats_request, $contentType);
+        $returnType = '\OpenAPI\Client\Model\CalculateTariffsResponse';
+        $request = $this->calculateTariffsRequest($calculate_tariffs_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -560,66 +548,34 @@ class OrdersStatsApi
     }
 
     /**
-     * Create request for operation 'getOrdersStats'
+     * Create request for operation 'calculateTariffs'
      *
-     * @param  int $campaign_id Идентификатор кампании в API и магазина в кабинете. Каждая кампания в API соответствует магазину в кабинете.  Чтобы узнать идентификаторы своих магазинов, воспользуйтесь запросом [GET campaigns](../../reference/campaigns/getCampaigns.md).  ℹ️ [Что такое кабинет и магазин на Маркете](https://yandex.ru/support/marketplace/account/introduction.html) (required)
-     * @param  string $page_token Идентификатор страницы c результатами.  Если параметр не указан, возвращается самая старая страница.  Рекомендуется передавать значение выходного параметра &#x60;nextPageToken&#x60;, полученное при последнем запросе.  Если задан &#x60;page_token&#x60;, параметры &#x60;offset&#x60;, &#x60;page_number&#x60; и &#x60;page_size&#x60; игнорируются. (optional)
-     * @param  int $limit Количество товаров на одной странице. (optional)
-     * @param  \OpenAPI\Client\Model\GetOrdersStatsRequest $get_orders_stats_request (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOrdersStats'] to see the possible values for this operation
+     * @param  \OpenAPI\Client\Model\CalculateTariffsRequest $calculate_tariffs_request (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['calculateTariffs'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getOrdersStatsRequest($campaign_id, $page_token = null, $limit = null, $get_orders_stats_request = null, string $contentType = self::contentTypes['getOrdersStats'][0])
+    public function calculateTariffsRequest($calculate_tariffs_request, string $contentType = self::contentTypes['calculateTariffs'][0])
     {
 
-        // verify the required parameter 'campaign_id' is set
-        if ($campaign_id === null || (is_array($campaign_id) && count($campaign_id) === 0)) {
+        // verify the required parameter 'calculate_tariffs_request' is set
+        if ($calculate_tariffs_request === null || (is_array($calculate_tariffs_request) && count($calculate_tariffs_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $campaign_id when calling getOrdersStats'
+                'Missing the required parameter $calculate_tariffs_request when calling calculateTariffs'
             );
         }
 
 
-
-
-
-        $resourcePath = '/campaigns/{campaignId}/stats/orders';
+        $resourcePath = '/tariffs/calculate';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
 
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $page_token,
-            'page_token', // param base name
-            'string', // openApiType
-            '', // style
-            false, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $limit,
-            'limit', // param base name
-            'integer', // openApiType
-            '', // style
-            false, // explode
-            false // required
-        ) ?? []);
 
 
-        // path params
-        if ($campaign_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'campaignId' . '}',
-                ObjectSerializer::toPathValue($campaign_id),
-                $resourcePath
-            );
-        }
 
 
         $headers = $this->headerSelector->selectHeaders(
@@ -629,12 +585,12 @@ class OrdersStatsApi
         );
 
         // for model (json/xml)
-        if (isset($get_orders_stats_request)) {
+        if (isset($calculate_tariffs_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($get_orders_stats_request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($calculate_tariffs_request));
             } else {
-                $httpBody = $get_orders_stats_request;
+                $httpBody = $calculate_tariffs_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

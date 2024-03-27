@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * OrdersStatsDTOTest Class Doc Comment
  *
  * @category    Class
- * @description Отчет по заказам.
+ * @description Информация по заказам.
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * OrderDeliveryEacTypeTest Class Doc Comment
  *
  * @category    Class
- * @description Тип кода подтверждения ЭАПП: - MERCHANT_TO_COURIER — продавец передает код курьеру. - COURIER_TO_MERCHANT — курьер передает код продавцу. - CHECKING_BY_MERCHANT - продавец проверяет код на своей стороне.
+ * @description Тип кода подтверждения ЭАПП: - &#x60;MERCHANT_TO_COURIER&#x60; — продавец передает код курьеру. - &#x60;COURIER_TO_MERCHANT&#x60; — курьер передает код продавцу. - &#x60;CHECKING_BY_MERCHANT&#x60; — продавец проверяет код на своей стороне.
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * OrderDeliveryPartnerTypeTest Class Doc Comment
  *
  * @category    Class
- * @description Тип сотрудничества со службой доставки в рамках конкретного заказа:  Принимает значение &#x60;YANDEX_MARKET&#x60; — магазин работает со службой доставки через Маркет.
+ * @description Тип сотрудничества со службой доставки в рамках конкретного заказа:  * &#x60;SHOP&#x60; — магазин работает со службой доставки напрямую или доставляет заказы самостоятельно. * &#x60;YANDEX_MARKET&#x60; — магазин работает со службой доставки через Маркет.
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

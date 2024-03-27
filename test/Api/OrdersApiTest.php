@@ -74,7 +74,7 @@ class OrdersApiTest extends TestCase
     /**
      * Test case for acceptOrderCancellation
      *
-     * Отмена заказа покупателем.
+     * Отмена заказа покупателем (DBS).
      *
      */
     public function testAcceptOrderCancellation()
@@ -122,7 +122,7 @@ class OrdersApiTest extends TestCase
     /**
      * Test case for provideOrderItemIdentifiers
      *
-     * Передача уникальных кодов маркировки единиц товара.
+     * Передача уникальных кодов маркировки единиц товара (DBS).
      *
      */
     public function testProvideOrderItemIdentifiers()
@@ -132,9 +132,21 @@ class OrdersApiTest extends TestCase
     }
 
     /**
+     * Test case for setOrderBoxLayout
+     *
+     * Подготовка заказа (FBS).
+     *
+     */
+    public function testSetOrderBoxLayout()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for setOrderShipmentBoxes
      *
-     * Передача количества грузовых мест в заказе.
+     * Передача количества грузовых мест в заказе (DBS).
      *
      */
     public function testSetOrderShipmentBoxes()
@@ -146,7 +158,7 @@ class OrdersApiTest extends TestCase
     /**
      * Test case for updateOrderItems
      *
-     * Удаление товара из заказа или уменьшение числа единиц.
+     * Удаление товара из заказа или уменьшение числа единиц (DBS).
      *
      */
     public function testUpdateOrderItems()

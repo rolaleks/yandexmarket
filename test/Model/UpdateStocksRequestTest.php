@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * UpdateStocksRequestTest Class Doc Comment
  *
  * @category    Class
- * @description Запрос на изменение информации по стокам.
+ * @description Запрос на изменение информации по остаткам товаров.
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

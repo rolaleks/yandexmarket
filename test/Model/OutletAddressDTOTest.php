@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * OutletAddressDTOTest Class Doc Comment
  *
  * @category    Class
- * @description Адрес точки продаж. Обязательный параметр.
+ * @description Адрес точки продаж.
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

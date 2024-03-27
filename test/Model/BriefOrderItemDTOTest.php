@@ -116,15 +116,6 @@ class BriefOrderItemDTOTest extends TestCase
     }
 
     /**
-     * Test attribute "feed_id"
-     */
-    public function testPropertyFeedId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "feed_category_id"
      */
     public function testPropertyFeedCategoryId()
