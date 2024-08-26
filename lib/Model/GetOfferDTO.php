@@ -518,7 +518,7 @@ class GetOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 256.";
         }
 
-        if (!is_null($this->container['videos']) && (count($this->container['videos']) > 1)) {
+        if (!is_null($this->container['videos']) && (count($this->container['videos']) > 6)) {
             $invalidProperties[] = "invalid value for 'videos', number of items must be less than or equal to 1.";
         }
 
@@ -690,7 +690,7 @@ class GetOfferDTO implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable videos cannot be null');
         }
 
-        if ((count($videos) > 1)) {
+        if ((count($videos) > 6)) {
             throw new \InvalidArgumentException('invalid value for $videos when calling GetOfferDTO., number of items must be less than or equal to 1.');
         }
         $this->container['videos'] = $videos;
