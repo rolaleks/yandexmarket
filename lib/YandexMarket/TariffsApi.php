@@ -618,7 +618,7 @@ class TariffsApi
 
         // this endpoint requires OAuth (access token)
         if (!empty($this->config->getAccessToken())) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+            $headers['Api-Key'] = $this->config->getAccessToken();
         }
 
         $defaultHeaders = [];
